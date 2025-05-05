@@ -1,0 +1,2732 @@
+@import url(‘https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap’);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.savingIncomeCorrelationText, .debtIncomeCorrelationText, .page25_gol{
+    display: block;
+    text-align: justify;
+}
+
+.orlogo_bosoo_div{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.orlogo_hundlun_div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20vh;
+}
+
+.orlogo_charts_div canvas{
+    width: 30vh;
+}
+.orlogo_charts_div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.orlogo_table1{
+    border-spacing: 0; /* no extra space between cells */
+    border-collapse: collapse; /* remove double borders */
+    margin-bottom: 50px;
+    border-top: none;    /* only top border */
+
+}
+.orlogo_table1 thead tr:first-child td {
+    border-top: none;
+    border-bottom: 3px solid #655ec2;
+}
+
+/* Remove bottom border from the last row */
+.orlogo_table1 tfoot tr:last-child td {
+    border-bottom: none;
+}
+
+.orlogo_table1 td:first-child {
+    text-align: left; /* First column: left */
+}
+
+
+    .orlogo_table1 td:nth-child(2),
+    .orlogo_table1 td:nth-child(3),
+    .orlogo_table1 thead td:nth-child(2),
+    .orlogo_table1 thead td:nth-child(3),
+    .orlogo_table1 tfoot td:nth-child(2),
+    .orlogo_table1 tfoot td:nth-child(3) {
+    text-align: right;
+}
+
+
+.orlogo_table1 td, 
+.orlogo_table1 th {
+    padding: 2px 5px;
+    line-height: 1;
+    height: 30px;
+    border-top: 0.5px solid #655ec2;    /* only top border */
+    border-bottom: 0.5px solid #655ec2; /* only bottom border */
+    border-left: none;               /* no left border */
+    border-right: none;   
+}
+
+.orlogo_table1 tbody td:first-child {
+    padding-left: 10px; /* or whatever extra you want */
+}
+
+/* EXTRA: Add margin (space) above tfoot */
+.orlogo_table1 tfoot td {
+    padding-top: 30px; /* adds space before the last row */
+}
+
+
+
+.savingIncomeCorrelationDiv span, .debtIncomeCorrelationDiv span{
+    font-size: 30px;
+    font-weight: 800;
+    color: #655ec2;
+    line-height: 1;
+}
+.legendsBosoo{
+    height: 60px;
+    width: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.legendsHundlun{
+    height: 40px;
+    width: 30vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.circleDivBosoo{
+    height: 10px;
+    width: 30vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top:15px;
+    gap: 15px;
+}
+
+.circleDiv{
+    height: 10px;
+    width: 30vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+.circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+@import url(‘https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap’);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+/* page1 */
+.page1{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    margin-right: 60px;
+}
+
+.containerr {
+    border-radius: 2px;
+    overflow: hidden;
+    width: 1250px;
+    height: 905px;
+}
+
+header {
+    padding: 30px 40px 20px;
+}
+
+.title {
+    color: #2d2d5f;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.chart-container {
+    padding: 0 20px 40px;
+    position: relative;
+}
+
+.y-axis {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100px;
+    color: #888;
+    font-size: 12px;
+}
+
+.y-axis-label {
+    position: relative;
+    transform: translateY(-50%);
+}
+
+.y-axis-line {
+    position: absolute;
+    left: 100px;
+    width: calc(100% - 100px);
+    height: 1px;
+    background-color: #e0e0e0;
+}
+
+.chart {
+    height: 250px;
+    margin-left: 100px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.chart svg {
+    width: 100%;
+    height: 100%;
+}
+
+.x-axis {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-left: 100px;
+    color: #555;
+    font-size: 14px;
+}
+
+.жил {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 3px;
+}
+
+.blue {
+    background-color: #333366;
+}
+
+.green {
+    background-color: #4CAF50;
+}
+
+.bottom-section {
+    margin-top: 30px;
+    background-color: #2d2d5f;
+    color: white;
+    padding: 30px 0 0 0;
+    
+}
+
+.bottom-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 40px;
+    margin-bottom: 5px;
+}
+
+.bottom-subtitle {
+    font-size: 18px;
+    padding: 0 40px;
+    margin-bottom: 30px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table td {
+    padding: 10px 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+}
+
+.data-table td:first-child {
+    width: 120px;
+}
+
+.qr-container {
+    position: relative;
+    height: 170px;
+}
+
+.qr-code {
+    position: absolute;
+    right: 40px;
+    top: -120px;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* page1 togsgol */
+
+
+/* page 26 */
+.chart-container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.bar {
+    margin: 15px 0;
+}
+
+.bar-label {
+    margin-bottom: 5px;
+}
+
+.bar-graph {
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.loan {
+    width: 20%;
+    background-color: #1A144E;
+    height: 100%;
+}
+
+.expense {
+    width: 65%;
+    background-color: #C3B8F2;
+    height: 100%;
+}
+
+.bar-value {
+    margin-top: 5px;
+    font-size: 14px;
+}
+/* page 26  togsgolo*/
+
+
+/* page 34-page 37 */
+.zyraas{
+    border-bottom: 2px solid #2c3e50;
+}
+.contenttt {
+    padding: 20px;
+    width: 1100px;
+    text-align: center;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #34495e;
+}
+.row-spacing {
+    margin-bottom: 20px; /* Одоогийн margin 10px + шинэ 10px = 20px */
+}
+.label {
+    font-weight: bold;
+}
+.value {
+    color: #e74c3c;
+}
+.highlight {
+    color: #2ecc71;
+}
+/* page 34-page 37 togsgol */
+
+/* page 33 */
+
+.timeline {
+    position: relative;
+    padding-left: 2px;
+    margin-top: 60px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    bottom: 20px;
+    left: 0;
+    width: 1px;
+    background-color: #5cdfca;
+}
+
+.circle-top {
+    position: absolute;
+    top: -30px;
+    left: -6px;
+    width: 12px;
+    height: 10px;
+    background-color: #5cdfca;
+    border-radius: 50%;
+}
+
+.step {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #5cdfca;
+    border-radius: 50%;
+}
+
+.step-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #5cdfca;
+    margin-right: 20px;
+    width: 50px;
+}
+
+.step-title {
+    font-size: 16px;
+    color: #5cdfca;
+    line-height: 1.4;
+    font-weight: 500;
+}
+/* page 33 togsgol */
+
+
+
+
+/* 6 buyu unelgee */
+/* Контентын хэсгийг төвд байрлуулах */
+
+
+/* Зургуудыг төвд байрлуулах */
+.content img {
+    display: block; /* Зургийг блок элемент болгоно */
+    margin: 0 auto; /* Хэвтээ төвд байрлуулна */
+    max-width: 100%; /* Зураг хэт том болохоос сэргийлнэ */
+}
+
+/* Хэрвээ тодорхой хэмжээ хэрэгтэй бол */
+.content p, .content span {
+    margin: 10px 0; /* Текст хоорондын зай */
+}
+
+/* Менюны загвар (өмнөх код хэвээрээ) */
+.menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.toggle {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: background 0.3s;
+}
+
+.toggle:hover {
+    background: #e0e0e0;
+}
+
+.sub-menu {
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    background: #333;
+    box-shadow: 0 2px 5px #3a376a;
+}
+
+.sub-menu.active {
+    display: flex;
+}
+
+.sub-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: all 0.3s;
+}
+
+.sub-menu a:hover {
+    background: white;
+    color: #3a376a;
+    padding-left: 5px;
+}
+/* 6 buyu unelgee togosgol */
+
+
+
+
+/* griph */
+
+
+
+
+
+
+
+
+
+
+/* Гол контейнер */
+.containerr {
+    text-align: center;
+}
+
+/* График хийх div */
+.donut-chart {
+    /* Хэмжээ тохируулах */
+    width: 150px;
+    height: 150px;
+
+    /* Дугуй хэлбэр гаргах */
+    border-radius: 50%;
+
+    /* Дугуй диаграмм зурах gradient */
+    background-image: conic-gradient(
+        #ff6384 40%,      /* Улаан хэсэг 40% */
+        #36a2eb 0 70%,   /* Цэнхэр хэсэг 30% */
+        #ffce56 0        /* Шар хэсэг 30% */
+    );
+
+    /* Дунд нүх гаргах */
+    position: relative;
+    margin: 0 auto; /* Төвлөрүүлэх */
+}
+
+/* Дунд нүх */
+.donut-chart::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+/*goliin nuh*/
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Тайлбар */
+.legend {
+    margin-top: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+.legend div {
+    margin-bottom: 10px;
+}
+
+.legend span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.red { background: #ff6384; }
+.blue { background: #36a2eb; }
+.yellow { background: #ffce56; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* griph togsoh */
+.menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.toggle {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: background 0.3s;
+}
+
+.toggle:hover {
+    background: #616066;
+}
+
+.sub-menu {
+    display: none; /* Анхандаа харагдахгүй */
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    background: #c2c2c2;
+    box-shadow: 0 2px 5px #3a376a;
+}
+
+.sub-menu.active {
+    display: flex; /* Товчлуур дээр дарахад харагдана */
+}
+
+.sub-menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 8px 0;
+    transition: all 0.3s;
+}
+
+.sub-menu a:hover {
+    background: #3a376a;
+    color: white;
+    padding-left: 5px;
+}
+
+
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a2a44; 
+    color: #fff;
+    padding: 40px;
+    position: relative;
+}
+.tod_text p{
+    font-size: 50px;
+    font-weight: bold;
+    color: #00c4b4;
+}
+
+#page1 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px;
+    position: relative;
+}
+
+#page1 .content {
+    max-width: 800px;
+}
+
+#page1 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00c4b4;
+    margin-bottom: 15px;
+}
+
+#page1 .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#page1 th, #page1 td {
+    padding: 10px;
+    border: 1px solid #00c4b4;
+    text-align: center;
+    font-size: 14px;
+}
+
+#page1 th {
+    background-color: #00c4b4;
+    color: #3a376a;
+    font-weight: bold;
+}
+
+#page1 .page-number {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+#page1 .container {
+    text-align: center;
+    max-width: 800px;
+}
+
+#page1 .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00c4b4; 
+    margin-bottom: 20px;
+}
+
+#page1 p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#page1 h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 30px 0;
+    line-height: 1.3;
+}
+
+.chart-container {
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+}
+
+#investmentChart {
+    width: 100%;
+    height: 100%;
+}
+
+.table {
+    background-color: #3a376a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    font-weight: bold;
+    color: #00c4b4;
+}
+
+td {
+    color: #fff;
+}
+
+
+#page2, #page3, #page4, #page5, #page6, #page7, #page8 {
+    background-color: #3a376a;
+}
+
+.content {
+    max-width: 1200px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 24px;
+    color: #00c4b4;
+}
+
+h4 {
+    font-size: 20px;
+    color: #fff;
+}
+
+h5 {
+    font-size: 18px;
+    color: #00c4b4;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3a376aff;
+}
+
+footer {
+    position: absolute;
+    bottom: 10mm; 
+    left: 20mm; 
+    right: 20mm;
+    text-align: center;
+    font-size: 10pt;
+    color: #b8aeaeaf; 
+    margin-top: 100px;
+
+}
+
+.tailan {
+    color: #b0b0b0;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.5;
+    position: fixed;
+    top: 20px;
+    margin-right: 80px;
+    right: 20px;
+    display: inline-block;
+    text-align: right;
+    z-index: 1000; 
+}
+
+.tailan::after {
+    font-family: 'Roboto', sans-serif;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: 13px;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 37px;
+    background-color: #3a376aff;
+}
+
+.tod_garchig{
+    margin-top: 60px;
+    font-size: 25px;
+    color: #3a376a;
+}
+.tod_garchigg{
+    border-bottom: 3px solid #3a376aff;
+    margin-top: 60px;
+    font-size: 25px;
+    color: #3a376a;
+}
+
+/* page 2 */
+#page2{
+    background-color: white;
+}
+.page2_doorh_div_qr {
+    position: absolute;
+    bottom: 20px; /* дэлгэцийн доороос 20px зай */
+    right: 160px;  /* дэлгэцийн баруунаас 20px зай */
+    width: 160px;
+    height: auto;
+}
+.page2_deed_tod{
+    font-size: 50px;
+    color: #3a376aff;
+    font-weight: bold;
+    line-height: 1;
+}
+.page2_AA_tod_heseg{
+    width: 100%;
+    height: 300px;
+    background-color: #3a376aff;
+    display: flex;
+    flex-direction: row;
+    gap: 30px   ;
+}
+.AA_ulaan {
+    font-size: 70px;
+}
+.qr_container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+.page2_qr{
+    width: 20%; 
+    height: auto;
+    background-color: #3a376aff; 
+    align-self: flex-end;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    padding: 0px;
+    color: #ffffff;
+}
+#page3{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    padding: 40px;
+    position: relative;
+}
+.Page3_gol{
+    display: flex;  
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+.page3_tod_text{
+    color: #3a376aff;
+    font-size: 35px;
+    line-height: 1;
+    font-weight: 700;
+}
+.page3_hoishluulah{
+    display: flex;
+    text-align: justify;
+    margin-left: 50px;
+    color: #111111;
+    font-weight: 300;
+}
+.page4_tod_text{
+    font-weight: 700;
+    color: #3a376aff;
+    font-size: 32px;
+    line-height: 1;
+}
+.page4_hoishluulah{
+    display: flex;
+    text-align: justify;
+    margin-left: 50px;
+    color: #111111;
+    font-weight: 300;
+}
+.baruun_taliin_heseg{
+    position: relative;
+    font-size: 50px;
+    background-color: #3a376aff;
+    justify-content: flex-end;
+    width: 2200px;
+    height: 830px;
+}
+.page3_unelgee {
+    position: absolute; /* Байршлыг чөлөөтэй өөрчлөх */
+    top: -90px;          /* Дээрээс 50px */
+    left: -15px;       /* Баруунаас 100px */
+    font-size: 170px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.page4_unelgee {
+    position: absolute; /* Байршлыг чөлөөтэй өөрчлөх */
+    top: -90px;          /* Дээрээс 50px */
+    left: -15px;       /* Баруунаас 100px */
+    font-size: 170px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.page5_unelgee {
+    position: absolute; /* Байршлыг чөлөөтэй өөрчлөх */
+    top: -90px;          /* Дээрээс 50px */
+    left: -15px;       /* Баруунаас 100px */
+    font-size: 170px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.page6_unelgee {
+    position: absolute; /* Байршлыг чөлөөтэй өөрчлөх */
+    top: -90px;          /* Дээрээс 50px */
+    left: -15px;       /* Баруунаас 100px */
+    font-size: 170px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.page7_unelgee {
+    position: absolute; /* Байршлыг чөлөөтэй өөрчлөх */
+    top: -58px;          /* Дээрээс 50px */
+    left: -15px;       /* Баруунаас 100px */
+    font-size: 170px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.page8_unelgee {
+    position: absolute; /* Байршлыг чөлөөтэй өөрчлөх */
+    top: -100px;          /* Дээрээс 50px */
+    left: -16px;       /* Баруунаас 100px */
+    font-size: 190px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+
+
+
+.Page3_gol ul li {
+    color: #000000;
+}
+.unelgee_dor{
+    font-style: italic;
+    display: flex;
+    font-weight: 300;
+    position: absolute;
+    text-align: start;
+    text-align: 6px;
+    color: white;
+    top: 25%;
+    left: 148px;
+    transform: translate(-40%, -40%);
+    line-height: 20px;
+    font-size: 15px;
+}
+.page8_unelgee_dor{
+    font-style: italic;
+    display: flex;
+    font-weight: 300;
+    position: absolute;
+    text-align: start;
+    text-align: 6px;
+    color: white;
+    top: 25%;
+    left: 151px;
+    transform: translate(-40%, -40%);
+    line-height: 20px;
+    font-size: 15px;
+}
+#page4{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    padding: 40px;
+    position: relative;
+}
+.page4_baruun_taliin_heseg{
+    position: relative;
+    font-size: 50px;
+    background-color: #3a376aff;
+    justify-content: flex-end;
+    width: 1125px;
+    height: 800px;
+}
+#page5{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    padding: 40px;
+    position: relative;
+}
+.page5_baruun_taliin_heseg{
+    position: relative;
+    font-size: 50px;
+    background-color: #3a376aff;
+    justify-content: flex-end;
+    width: 1650px;
+    height: 800px;
+}
+.page5_tod_text{
+    color: #3a376aff;
+    font-size: 39px;
+    line-height: 1;
+    font-weight: 700;
+}
+.page5_hoishluulah{
+    display: flex;
+    text-align: justify;
+    color: #111111;
+    font-weight: 300;
+    margin-left: 50px;
+}
+
+#page6{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    padding: 40px;
+    position: relative;
+}
+.page6_baruun_taliin_heseg{
+    position: relative;
+    font-size: 50px;
+    background-color: #3a376aff;
+    justify-content: flex-end;
+    width: 2100px;
+    height: 850px;
+}
+.page6_tod_text{
+    font-weight: 700;
+    color: #3a376aff;
+    font-size: 32px;
+}
+.page6_hoishluulah{
+    display: flex;
+    text-align: justify;
+    margin-left: 50px;
+    color: #111111;
+    font-weight: 300;
+}
+
+#page7{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    padding: 40px;
+    position: relative;
+}
+.page7_baruun_taliin_heseg{
+    position: relative;
+    font-size: 50px;
+    background-color: #3a376aff;
+    justify-content: flex-end;
+    width: 1550px;
+    height: 780px;
+}
+.page7_tod_text{
+    font-weight: 700;
+    color: #3a376aff;
+    font-size: 32px;
+    line-height: 1;
+}
+.page7_hoishluulah{
+    display: flex;
+    text-align: justify;
+    color: #111111;
+    font-weight: 300;
+    margin-left: 50px;
+}
+
+#page8{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    padding: 40px;
+    position: relative;
+}
+.page8_baruun_taliin_heseg{
+    position: relative;
+    font-size: 50px;
+    background-color: #3a376aff;
+    justify-content: flex-end;
+    width: 1550px;
+    height: 780px;
+}
+.page8_tod_text{
+    line-height: 1;
+    font-weight: 700;
+    color: #3a376aff;
+    font-size: 32px;
+}
+.page8_hoishluulah{
+    display: flex;
+    text-align: justify;
+    color: #111111;
+    font-weight: 300;
+    margin-left: 50px;
+}
+/* Page 9: Financial Summary */
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Replace with the correct font if needed */
+    line-height: 1.6;
+}
+
+#page9 {
+    background-color: #3a376aff; /* Dark blue background */
+    color: #ffffff; /* White text */
+    min-height: 100vh; /* Full height for the section */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px;
+    position: relative;
+    text-align: center;
+}
+#page9 .title{
+    color: #ffffff;
+    text-align: start;
+    line-height: 1;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 90px 580px 0px 80px;
+}
+#page9 .canvas {
+    width: 1080px;
+    height: 1600px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#page9 .top-right-label {
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    font-size: 12px;
+    color: #00FFD1;
+    background-color: transparent;
+    width: 160px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stages container */
+#page9 .vertical-line {
+    position: absolute;
+    left: 530px;
+    top: 200px;
+    height: 1450px;
+    width: 3px;
+    background-color: #00FFD1;
+}
+#page9 .stage {
+    position: absolute;
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: flex-start;
+}
+
+#page9 .stage_1_name {
+    font-size: 20px;
+    color: #00FFD1;
+    text-align: end;
+    padding-left: 90px;
+    line-height: 1;
+    font-weight: 550;
+}
+#page9 .stage_2_name {
+    font-size: 20px;
+    color: #00FFD1;
+    text-align: start;
+    padding-left: 50px;
+    padding-top: -80px;
+    line-height: 1;
+    font-weight: 550;
+}
+#page9 .stage_3_name {
+    font-size: 20px;
+    color: #00FFD1;
+    text-align: end;
+    padding-left: 140px;
+    line-height: 1;
+    font-weight: 550;
+    margin-bottom: 10px;
+    margin-top: -45px;
+}
+#page9 .stage_4_name {
+    font-size: 20px;
+    color: #00FFD1;
+    text-align: start;
+    padding-left: 50px;
+    line-height: 1;
+    font-weight: 550;
+}
+
+#page9 .togrog_1 {
+    font-weight: 700;
+    font-size: 48px;
+    color: #FFFFFF;
+    padding-left: 194px;
+}
+#page9 .togrog_2 {
+    font-weight: 700;
+    font-size: 48px;
+    color: #FFFFFF;
+    padding-right: 65px;
+}
+#page9 .togrog_3 {
+    font-weight: 700;
+    font-size: 48px;
+    color: #FFFFFF;
+    padding-left: 194px;
+}
+#page9 .togrog_4 {
+    font-weight: 700;
+    font-size: 48px;
+    color: #FFFFFF;
+    padding-right: 75px;
+}
+
+#page9 .x_zuraas_1,
+#page9 .x_zuraas_2,
+#page9 .x_zuraas_3,
+#page9 .x_zuraas_4 {
+    position: absolute;
+    height: 3px;
+    background-color: #00FFD1;
+}
+
+#page9 .dund_boronhii_1,
+#page9 .dund_boronhii_2,
+#page9 .dund_boronhii_3,
+#page9 .dund_boronhii_4 {
+    width: 30px;
+    height: 30px;
+    background-color: #00FFD1;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#page9 .tom_booronhii_deed,
+#page9 .tom_booronhii_dood {
+    width: 40px;
+    height: 40px;
+    background-color: #00FFD1;
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+
+#page9 .jijig_booronhii_1,
+#page9 .jijig_booronhii_2,
+#page9 .jijig_booronhii_3,
+#page9 .jijig_booronhii_4 {
+    width: 20px;
+    height: 20px;
+    background-color: #00FFD1;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#page9 .stage-1 { top: 220px; left: 100px; }
+#page9 .stage-2 { top: 395px; left: 650px; align-items: flex-end;}
+#page9 .stage-3 { top: 660px; left: 100px; }
+#page9 .stage-4 { top: 830px; left: 650px; align-items: flex-end;}
+
+#page9 .x_zuraas_1 { top: 120px; left: 290px; width: 150px; }
+#page9 .x_zuraas_2 { top: 206px; right: 195px; width: 150px; }
+#page9 .x_zuraas_3 { top: 200px; left: 280px; width: 150px; }
+#page9 .x_zuraas_4 { top: 290px; right: 210px; width: 150px; }
+
+#page9 .dund_boronhii_1 { top: 107px; left: 270px; }
+#page9 .dund_boronhii_2 { top: 192.5px; left: 10px; }
+#page9 .dund_boronhii_3 { top: 187px; left: 270px; }
+#page9 .dund_boronhii_4 { top: 275.5px; left: 10px; }
+
+#page9 .tom_booronhii_deed { top: 0px; left: -18px; }
+#page9 .tom_booronhii_dood { bottom: -40px; left: 512px; }
+
+#page9 .jijig_booronhii_1 { top: 332px; left: 521.5px; }
+#page9 .jijig_booronhii_2 { top: 592px; left: 521.5px; }
+#page9 .jijig_booronhii_3 { bottom: 730px; left: 521.5px; }
+#page9 .jijig_booronhii_4 { bottom: 470px; left: 521.5px; }
+
+
+#page9 .text-container_1 {
+    margin-top: 100px; 
+    line-height: 1;
+}
+
+#page9 .text-container_2 {
+    margin-top: 190px;
+    line-height: 1;
+}
+
+#page9 .text-container_3 {
+    margin-top: 230px; 
+    line-height: 1;
+}
+
+#page9 .text-container_4 {
+    margin-top: 270px;
+    line-height: 1;
+}
+
+#page9 .stage-2 .text-container, .stage-4 .text-container {
+    text-align: right;
+}
+
+#page9 .too_jil_1 {
+    padding-left: 140px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-weight: 750;
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+#page9 .too_jil_2 {
+    padding-left: 50px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-weight: 750;
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+#page9 .too_jil_3 {
+    padding-left: 135px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-weight: 750;
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+#page9 .too_jil_4 {
+    padding-left: 50px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-weight: 750;
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+#page9 .quote {
+    position: absolute;
+    bottom: 160px;
+    right: 60px;
+    font-size: 16px;
+    font-style: italic;
+    color: #FFFFFF;
+    text-align: start;
+    line-height: 1.3;
+}
+
+#page9 .footer-right {
+    position: absolute;
+    bottom: 130px;
+    right: 65px;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-style: italic;
+}
+
+#page9 .content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+#page9 .header h2 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 20px;
+}
+
+
+
+.page10_text{
+    font-size: 50px;
+}
+#page11{
+    background-color: aliceblue;
+}
+.page11_todruulah{
+    font-size: 43px;
+    color: #3a376aff;
+}
+.page11_todruulah_dood_tal{
+    font-size: 20px;
+    color: #3a376aff;
+    margin-top: 80px
+}
+.page11_baruun_taliin_heseg{
+    justify-content: flex-end;
+}
+
+.page11_baruun_taliin_heseg {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    max-width: 100%; 
+}
+
+.page11_baruun_taliin_heseg img {
+    max-width: 100%; 
+    border-radius: 10px;
+    max-height: auto;
+}
+
+#page11 .content > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#page11 .content > div > div:first-child {
+    flex: 1; 
+    max-width: 55%;
+}
+
+
+#page12{
+    background-color: aliceblue;
+}
+.page12_todruulah{
+    font-size: 43px;
+    color: #3a376aff;
+}
+.page12_todruulah_dood_tal{
+    font-size: 20px;
+    color: #3a376aff;
+    margin-top: 80px;
+}
+.page12_baruun_taliin_heseg{
+    justify-content: flex-end;
+}
+
+.page12_baruun_taliin_heseg {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    max-width: 100%; 
+}
+
+.page12_baruun_taliin_heseg img {
+    max-width: 100%; 
+    border-radius: 10px;
+    max-height: auto;
+}
+
+#page12 .content > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#page12 .content > div > div:first-child {
+    flex: 1; 
+    max-width: 55%;
+}
+
+#page13{
+    background-color: aliceblue;
+}
+.page13_todruulah{
+    font-size: 43px;
+    color: #3a376aff;
+}
+.page13_todruulah_dood_tal{
+    font-size: 20px;
+    color: #3a376aff;
+    margin-top: 80px;
+}
+.page13_baruun_taliin_heseg{
+    justify-content: flex-end;
+}
+
+.page13_baruun_taliin_heseg {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    max-width: 100%; 
+}
+
+.page13_baruun_taliin_heseg img {
+    max-width: 100%; 
+    border-radius: 10px;
+    max-height: auto;
+}
+
+#page13 .content > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#page13 .content > div > div:first-child {
+    flex: 1; 
+    max-width: 55%;
+}
+#page14{
+    background-color: aliceblue;
+}
+.page14_todruulah{
+    font-size: 43px;
+    color: #3a376aff;
+}
+.page14_todruulah_dood_tal{
+    font-size: 20px;
+    color: #3a376aff;
+    margin-top: 80px;
+}
+.page14_baruun_taliin_heseg{
+    justify-content: flex-end;
+}
+
+.page14_baruun_taliin_heseg {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    max-width: 100%;
+}
+
+.page14_baruun_taliin_heseg img {
+    max-width: 100%; 
+    border-radius: 10px;
+    max-height: 100vh;
+}
+
+#page14 .content > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#page14 .content > div > div:first-child {
+    flex: 1; 
+    max-width: 55%;
+}
+.page15{
+    font-size: 50px;
+    color: white;
+}
+.page16_todruulsan_garchig{
+    font-size: 42.5px;
+    color: #ffffff;
+}
+.page16_tudruulsan_text{
+    font-size: 20px;
+    color: #00c4b4;
+}
+.page16_graph{
+    font-size: 50px;
+    color: #ffffff;
+}
+#page17{
+    justify-items: center;
+    background-color: #3a376aff;
+}
+.page17_center{
+    justify-items: center;
+}
+.page17_todruulah{
+    line-height: 1;
+    font-size: 42.5px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.page17_door_todruulah{
+    font-size: 42.5px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1;
+    width: auto;
+    height: 20px;
+}
+.page17_img{
+    width: 90%;
+    height: -40%;
+}
+#page18{
+    background-color: white;
+}
+.page18_tod_garchig{
+    font-size: 50px;
+    color: #3a376aff;
+    line-height: 1;
+}
+.page18_jijig_garchig{
+    font-size: 25px;
+    color: #3a376aff;
+    margin: 0;
+    margin-top: 50px;
+    font-weight: 700;
+}
+.page18_todruulagui_heseg{
+    margin-top: 30px;
+    font-size: 50px;
+    color: #111111;
+    line-height: 1;
+    font-weight: 300;
+}
+.page18_todruulagui_dood_heseg{
+    font-size: 20px;
+    color: #000000;
+}
+.page18_doorh_div_qr img{
+    width: 90%;
+    height: auto;
+}
+.page18_doorh_div_qr{
+    width: 140px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 100px;
+}
+
+.page18_gol{
+    display: flex;  
+    flex-direction: row;
+}
+.page18_baruun_taliin_heseg {
+    justify-content: flex-end;
+    width: 2500px;
+    max-height: 950px; /* Тексттэй ижил өндөр (font-size: 20px) */
+}
+
+.page18_baruun_taliin_heseg img {
+    width: 350px;
+    height: 950px; /* Контейнерын өндрийг бүрэн ашиглана */
+}
+.page18_hoishluulah{
+    text-align: justify;
+    margin-left: 40px;
+    font-weight: 400;
+    color: #111111;
+    line-height: 1.4;
+}
+#page19{
+    background-color: white;
+    text-align: center;
+}
+.page19_buhelden{
+    color: #3a376a;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 700;
+    line-height: 1;
+}
+.page19_deer{
+    color: #3a376a;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1;
+}
+#page20{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    padding: 40px;
+    position: relative;
+}
+.page20_baruun_taliin_heseg {
+    font-size: 50px;
+    background-color: #3a376aff;
+    justify-content: flex-end;
+    width: 1650px;
+    height: 940px;
+}
+
+.zuragnuud {
+    display: flex;        /* Зурагнуудыг нэг эгнээнд байрлуулна */
+    gap: 20px;            /* Зурагнуудын хоорондын зай */
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+}
+
+.page20_baruun_taliin_heseg img {
+    width: 1500px;   /* эсвэл 100px, 150px гэх мэт тааруулна */
+    height: auto;
+}
+.page20_dood_qr_code{
+    width: 200px;
+    height: 200px;
+    background-color: #3a376aff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 90px;
+}
+.page20_todruulah{
+    font-size: 50px;
+    color: #3a376aff;
+    line-height: 1;
+}
+.page20_todruulah_dood{
+    font-size: 35px;
+    color: #3a376aff;
+}
+.page20_unelgee_dor{
+    font-size: 50px;
+    color: #ffffff;
+    text-align: end;
+    line-height: 1;
+}
+.page20_hoishluulah{
+    margin-left: 30px;
+}
+
+.page20_doorh_div_qr img{
+    width: 90%;
+    height: auto;
+}
+.page20_doorh_div_qr{
+    width: 140px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 100px;
+}
+.page20_baruun_taliin_heseg img{
+    display: flex;
+    width: 90%;
+    height: auto;
+    justify-content: center;
+    margin-top: 390px;
+}
+#page21{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    padding: 40px;
+    position: relative;
+}
+.page21_baruun_taliin_heseg{
+    font-size: 50px;
+    background-color: #3a376aff;
+    justify-content: flex-end;
+    width: 2825px;
+    height: 940px;
+}
+.page21_todruulah{
+    font-size: 50px;
+    color: #3a376aff;
+    line-height: 1;
+}
+.page21_todruulah_dood{
+    font-size: 35px;
+    color: #3a376aff;
+}
+.page21_unelgee_dor{          
+    font-size: 50px;
+    color: #ffffff;
+    text-align: end;
+    line-height: 1;
+}
+
+
+.page21_baruun_taliin_heseg img{
+    display: flex;
+    width: 90%;
+    height: auto;
+    justify-content: center;
+    margin-top: 360px;
+}
+.page21_doorh_div_qr{
+    width: 140px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 100px;
+}
+.page21_hoishluulah{
+    margin-left: 30px;
+}
+#page22{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    padding: 40px;
+    position: relative;
+}
+.page22_baruun_taliin_heseg{
+    font-size: 50px;
+    background-color: #3a376aff;
+    justify-content: flex-end;
+    width: 2000px;
+    height: 940px;
+}
+.page22_todruulah{
+    font-size: 50px;
+    color: #3a376aff;
+    line-height: 1;
+}
+.page22_todruulah_dood{
+    font-size: 35px;
+    color: #3a376aff;
+}
+.page22_unelgee_dor{
+    font-size: 50px;
+    color: #ffffff;
+    text-align: end;
+    line-height: 1;
+}
+
+.page22_baruun_taliin_heseg img{
+    display: flex;
+    width: 90%;
+    height: auto;
+    justify-content: center;
+    margin-top: 350px;
+}
+
+.page22_dood_qr_code{
+    width: 140px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 100px;
+}
+.page22_hoishluulah{
+    margin-left: 30px;
+}
+#page23{
+    background-color: rgb(255, 255, 255);
+}
+.page24_buhelden{
+    font-size: 40px;
+    text-align: start;
+}
+#page24{
+    background-color: #3a376aff;
+}
+#page25{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+}
+.page25_tod_garchig{
+    font-size: 30px;
+    color: #3a376aff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+}
+.page25_gol{
+    font-weight: 500;
+    font-size: 15px;
+    color: #1111116e;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    width: 100%;
+}
+#page26{
+    background-color: rgb(255, 255, 255);
+}
+#page27{
+    background-color: rgb(255, 255, 255);
+}
+#page29{
+    background-color: rgb(255, 255, 255);
+}
+.page29_baruun_taliin_heseg{
+    font-size: 50px;
+    background-color: #3a376aff;
+    justify-content: flex-end;
+    width: 300px;
+    height: auto;
+    margin-left: 50px;
+}
+.page29_tod_garchig{
+    color: #3a376aff;
+    font-weight: 700;
+}
+.page19_tod_garchig_ulaan{
+    color: red;
+    font-weight: 600;
+}
+.page29_budeg_heseg{
+    color: #111111;
+    font-weight: 400;
+}
+.page29_budeg_heseg_ulaan{
+    color: red;
+    font-weight: 400;
+}
+.page29_tod_garchig_goliin_heseg{
+    color: #111111;
+    font-weight: 600;
+}
+#page30{
+    background-color: rgb(255, 255, 255);
+}
+.page30_baruun_taliin_heseg{
+    font-size: 50px;
+    background-color: #3a376aff;
+    justify-content: flex-end;
+    width: 400px;
+    height: auto;
+}
+
+#page31{
+    background-color: rgb(255, 255, 255);
+}
+.page31_gol{
+    display: flex;
+    flex-direction: row;
+    margin-top: 120px;
+}
+.page31_baruun_taliin_heseg{
+    position: relative;
+    justify-content: flex-end;
+    width: 1000px;
+    height: auto;
+}
+.page31_zuulun_taliin_heseg{
+    position: relative;
+    justify-content: flex-start;
+    width: 700px;
+    height: auto;
+}
+#page33{
+    background-color: #3a376aff;
+}
+#page34{
+    background-color: rgb(255, 255, 255);
+}
+#page35{
+    background-color: rgb(255, 255, 255);
+}
+#page36{
+    background-color: rgb(255, 255, 255);
+}
+#page37{
+    background-color: rgb(255, 255, 255);
+}
+#page39{
+    background-color: white;
+}
+.page39_deed_garchig{
+    font-size: 30px;
+}
+.page39_tod_garchig{
+    font-size: 20px;
+    color: #3a376aff;
+}
+.page39_gol_heseg{
+    color: #000000;
+}
+.page39_tod_garchig_ulaan{
+    color: red;
+}
+
+.page39_hoishluulah{
+    margin-left: 50px;
+}
+/* Page 40 */
+#page40 {
+    width: 78.5%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #fff;
+    padding: 40px;
+    position: relative;
+    text-align: center;
+}
+
+#page40 .content {
+    max-width: 800px;
+}
+
+#page40 p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#page40 .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#page40 th, #page40 td {
+    padding: 10px;
+    border: 1px solid white;
+    font-size: 14px;
+}
+
+#page40 th {
+    background-color: white;
+    color: #3a376aff;
+    font-weight: bold;
+
+}
+
+
+#page40 .page-number {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+.page40_td_budeg{
+    color: #111111;
+    font-weight: 400;
+    text-align: start;
+}
+
+/* Page 41 */
+#page41 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #fff;
+    padding: 40px;
+    position: relative;
+}
+.page41_deed_tal{
+    text-align: justify;
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 300;
+    color: #202020;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+#page41 .content {
+    max-width: 800px;
+}
+
+#page41 ul {
+    list-style-type: disc;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+#page41 p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+#page41 .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#page41 th, #page41 td {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#page41 th {
+    color: #3a376aff;
+    font-weight: bold;
+}
+
+#page41 .page-number {
+    font-size: 14px;
+    color: #000000;
+    margin-top: 20px;
+}
+.page41_td_budeg{
+    color: #222222;
+    font-weight: 400;
+}
+.page41_td_tod{
+    color: #3a376a;
+    font-weight: 700;
+}
+tbody td {
+    font-size: 13px;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    text-align: center;
+}
+
+/* Page 42 */
+#page42 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #000000;
+    padding: 40px;
+    position: relative;
+}
+
+#page42 .content {
+    max-width: 800px;
+}
+
+
+
+#page42 .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#page42 th, #page42 td {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+
+
+
+#page42 th {
+    color: #3a376aff;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+#page42 .page-number {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+
+
+
+.page42_tod_garchig{
+    display: flex;
+    text-align: justify;
+    font-size: 25px;
+    color: #3a376a;
+    line-height: 1;
+}
+.page42_tod_garchig_div{
+    margin-top: 50px;
+}
+
+.page42_td_budeg{
+    color: #222222;
+    font-weight: 400;
+}
+.page42_td_tod{
+    color: #3a376a;
+    font-weight: 700;
+}
+
+/* Page 43 */
+#page43 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 40px;
+    position: relative;
+
+    flex-direction: row;
+}
+
+#page43 .content {
+    max-width: 800px;
+}
+
+#page43 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00c4b4;
+    margin-bottom: 15px;
+}
+
+#page43 ul {
+    list-style-type: disc;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+#page43 li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#page43 .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#page43 th, #page43 td {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+#page43 th {
+    color: #3a376aff;
+    font-weight: bold;
+}
+
+#page43 .page-number {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+.page43_tod_garchig{
+    font-size: 25px;
+    color: #3a376a;
+    line-height: 1;
+}
+.page43_tod_garchig_div{
+    margin-top: 50px;
+}
+.page43_deed_tal{
+    font-size: 15px;
+    line-height: 1.3;
+    font-weight: 420;
+    color: #3a376a;
+    margin-left: 20px;
+}
+.page43_td_budeg{
+    gap: 100px;
+    color: #222222;
+    font-weight: 400;
+}
+.page43_td_tod{
+    color: #3a376a;
+    font-weight: 700;
+}
+/* Page 44 */
+#page44 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px;
+    position: relative;
+}
+.page44_tod_garchig{
+    font-size: 100px;
+    color: #3a376aff;
+}
+.page44_dood_tod_garchig{
+    font-size: 50px;
+    color: #3a376aff;
+}
+.page44_gol_hoishlulah{
+    color: #3a376aff;
+    margin-left: 20px;
+}
+.page44_gol_ulaan{
+    color: red;
+    margin-left: 20px;
+}
+.page44_li_todruulah{
+    font-size: 50px;
+    color: #3a376aff;
+}
+.page44_dood_tal{
+    font-size: 50px;
+    color: #3a376aff;
+}
+#page44 .content {
+    max-width: 600px;
+}
+
+#page44 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00c4b4;
+    margin-bottom: 15px;
+}
+
+#page44 ul {
+    list-style-type: disc;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+#page44 li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#page44 p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#page44 .page-number {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Page 45 */
+#page45 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    position: relative;
+}
+
+
+
+#page45 p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#page45 .chart-container {
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}
+
+#page45 .page-number {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Page 46 */
+#page46 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 40px;
+    position: relative;
+
+    
+}
+
+/* Page 47 */
+.page47_dood_grph{
+    width: 88%;
+    height: auto;
+}
+#page47 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 40px;
+    position: relative;
+}
+
+
+#page47 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00c4b4;
+    margin-bottom: 15px;
+}
+
+#page47 p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#page47 .chart-container {
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}
+
+#page47 .page-number {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* Page 48 */
+#page48 {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a376aff;
+    color: #fff;
+    padding: 40px;
+    position: relative;
+}
+
+#page48 .content {
+    max-width: 600px;
+}
+
+
+
+#page48 p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#page48 ol {
+    list-style-type: decimal;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+#page48 li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#page48 .signature {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+.page48_hoishluulah{
+    margin-left: 50px;
+}
+
+.page48_chart{
+    width: 100%;
+    height: 300px;
+
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+}
+.Page48_gol{
+    display: flex;  
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+.page48_baruun_taliin_heseg{
+    position: relative;
+    font-size: 50px;
+    justify-content: flex-end;
+    width: 1550px;
+    height: 780px;
+}
+
+.page48_chart_topright {
+    position: absolute;
+    top: 110px;       /* дээд талаас 20px */
+    right: 200px;     /* баруун талаас 20px */
+    width: 200px;    /* хүссэн хэмжээгээр тохируулж болно */
+    height: auto;
+}
+/* Responsive Design */

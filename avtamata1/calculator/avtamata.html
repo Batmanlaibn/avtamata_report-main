@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  height: 800px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#li1 {
+  color: #323150;
+}
+#li1 span {
+  color: #2e2e2e;
+}
+#li2 {
+  color: #ce4d63;
+}
+#li2 span {
+  color: #2e2e2e;
+}
+#inputdiv {
+  height: 50px;
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#monthlyInvestment {
+outline: none;
+background-color: white;
+height: 50px;
+width: 220px;
+border: solid #363636;
+border-radius: 100px;
+font-size: 12px;
+padding: 25px;
+
+}
+#divEmpty {
+  height: 10px;
+  width: 100%;
+}
+#headingdiv {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+#divEmpty1 {
+  height: 30px;
+  width: 100%;
+}
+#p1 {
+  font-size: 16px;
+  color: #2e2e2e;
+}
+#yearSelectordiv {
+  height: 40px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 15px;
+  
+}
+
+#yearSelector {
+  height: 60px;
+  width: 99%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    rgb(206, 77, 99) 50%,
+    rgb(229, 229, 229) 50%
+  );
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 12px;
+}
+.slider:hover {
+  opacity: 1;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: #ce4d63 solid 2px;
+  cursor: pointer;
+  
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: #ce4d63 solid 2px;
+  cursor: pointer;
+}
+
+#yearSelector p {
+  margin-top: 18px;
+  margin-right: 28px;
+  font-size: 13px;
+}
+#resultdiv {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+#resultdivv {
+  height: 120px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+#divEmpty2 {
+  height: 120px;
+  width: 30%;
+}
+#bankdiv {
+  width: 80%;
+  font-size: 17px;
+  color: #2e2e2e;
+  margin-left: 60px;
+}
+#text0 {
+  font-size: 30px;
+  color: #323150;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+#text2 {
+  font-size: 30px;
+  color: #ce4d63;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  margin-left: 20px;
+  margin-top: 4px;
+}
+#investmentdiv {
+  width: 90%;
+  font-size: 17px;
+  color: #2e2e2e;
+  margin-left: 20px;
+}
+#text1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 21px;
+}
+#dynamicYearNumber {
+  color: #ce4d63;
+}
+
+#heading1div {
+  height: 30px;
+  width: 100vw;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#tugrugSymbol {
+  font-weight: 900;
+}
+
+.chartBox {
+  width: 2000px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+#myChart {
+  width: 2000px;
+  height: 400px;
+}
+#charting{
+  width: 2000px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+}
+</style>
+
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="inputdiv">
+        <input
+          id="monthlyInvestment"
+          type="text"
+          placeholder="Enter monthly investment"  style="font-weight: 500; font-family: 'Montserrat', sans-serif;"
+        />
+        <div id="divEmpty"></div>
+      </div>
+      <div id="headingdiv">
+        <p id="p1" style="font-weight: 500; font-family: 'Montserrat', sans-serif;">Today</p>
+        <div id="divEmpty1"></div>
+        <p id="p1" style="font-weight: 500; font-family: 'Montserrat', sans-serif;">Year 30</p>
+      </div>
+      <div id="yearSelectordiv">
+        <div id="icon1div">
+          <i
+            class="bi bi-dash-circle"
+            style="font-size: 26px; color: #2e2e2e; cursor: pointer"
+          ></i>
+        </div>
+        <div id="yearSelector">
+            <input type="range" name="input" id="slider" class="slider" min="1" max="30" value="15" step="1">
+            <p  style="font-weight: 500; font-family: 'Montserrat', sans-serif;">Year <span id="yearValue1" style="font-weight: 500; font-family: 'Montserrat', sans-serif;">15</span></p>
+        </div>
+        <div id="icon2div">
+          <i
+            class="bi bi-plus-circle"
+            style="font-size: 27px; color: #2e2e2e; cursor: pointer; margin-left: 20px;
+            "
+          ></i>
+        </div>
+      </div>
+      <div id="resultdiv">
+        <div id="resultdivv">
+          <div id="bankdiv">
+            <li id="li1"><span  style="font-weight: 500; font-family: 'Montserrat', sans-serif;">Bank</span></li>
+            <div id="text0">
+              <p id="tugrugSymbol" style="font-weight: 600; font-family: 'Montserrat', sans-serif;">₮</p>
+              <p id="dynamicBankValue" style="font-weight: 700; font-family: 'Montserrat', sans-serif;">0</p>
+            </div>
+          </div>
+          <div id="investmentdiv">
+            <li id="li2" style="font-weight: 500; font-family: 'Montserrat', sans-serif;"><span>Investment after</span></li>
+            <div id="text1">
+              <p  style="font-weight: 500; font-family: 'Montserrat', sans-serif;"><span id="yearValue2"  style="font-weight: 500; font-family: 'Montserrat', sans-serif;">15</span> years.</p>
+            </div>
+            <div id="text2">
+              <p id="tugrugSymbol" style="font-weight: 600; font-family: 'Montserrat', sans-serif;">₮</p>
+              <p id="dynamicInvestValue" style="font-weight: 700; font-family: 'Montserrat', sans-serif;">0</p>
+            </div>
+          </div>
+        </div>
+        <div id="divEmpty2"></div>
+      </div>
+<div id="charting">
+      <div class="chartBox">
+        <canvas id="myChart" width="500" height="200"></canvas>
+      </div>
+  <div id="heading1div">      
+          <p  id="p1" style="font-weight: 500; font-family: 'Montserrat', sans-serif;   margin-left: 230px;
+          ">Today</p>
+          <p  id="p1" style="font-weight: 500; font-family: 'Montserrat', sans-serif;   margin-right: 210px;
+          ">Year 30</p>
+      </div>
+</div>
+    </div>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js">
+let input1 = document.getElementById("monthlyInvestment");
+
+let result1 = document.getElementById("dynamicBankValue");
+let result2 = document.getElementById("dynamicInvestValue");
+
+let text0 = document.getElementById("text0");
+let text2 = document.getElementById("text2");
+
+let bankdiv = document.getElementById("bankdiv");
+let investmentdiv = document.getElementById("investmentdiv");
+
+let minusIcon = document.querySelector("#icon1div i");
+let plusIcon = document.querySelector("#icon2div i");
+
+function calculateFinalAmountBank(
+  input1,
+  monthlyInterestRate1,
+  numberOfMonths1
+) {
+  let PMTB = parseFloat(input1.value);
+  let rb = parseFloat(monthlyInterestRate1) / 100;
+  let nb = parseInt(numberOfMonths1);
+
+  let FVb = (PMTB * ((1 + rb) ** nb - 1)) / rb;
+  return FVb.toFixed(0);
+}
+
+function calculateFinalAmount(input1, monthlyInterestRate2, numberOfMonths2) {
+  let PMT = parseFloat(input1.value);
+  let r = parseFloat(monthlyInterestRate2) / 100;
+  let n = parseInt(numberOfMonths2);
+
+  let FV = (PMT * ((1 + r) ** n - 1)) / r;
+  return FV.toFixed(0);
+}
+
+function updateChartData() {
+  const monthlyInterestRate1 = 1.025;
+  const monthlyInterestRate2 = 1.5416666667;
+  const numberOfMonths = parseInt(output2.innerHTML) * 12;
+
+  let bankValues = [0];
+  let investmentValues = [0];
+
+  let bankAmount = 0;
+  let investmentAmount = 0;
+
+  for (let year = 1; year <= 30; year++) {
+    const numberOfMonths1 = year * 12;
+    bankAmount = parseFloat(
+      calculateFinalAmountBank(input1, monthlyInterestRate1, numberOfMonths1)
+    );
+    bankValues.push(bankAmount);
+
+    const numberOfMonths2 = year * 12;
+    investmentAmount = parseFloat(
+      calculateFinalAmount(input1, monthlyInterestRate2, numberOfMonths2)
+    );
+    investmentValues.push(investmentAmount);
+  }
+
+  return { bankValues, investmentValues };
+}
+
+
+function updateChart() {
+  const { bankValues, investmentValues } = updateChartData();
+
+  const selectedYear = parseInt(output2.innerHTML);
+
+  myChart.data.datasets[0].data = bankValues;
+  myChart.data.datasets[1].data = investmentValues;
+  myChart.options.scales.y.max = Math.max(
+    Math.max(...bankValues),
+    Math.max(...investmentValues)
+  );
+
+  // Calculate the opacity for each data point based on the selectedYear
+  const opacityArray = Array.from({ length: 30 }, (_, i) =>
+    i + 1 <= selectedYear ? 1 : 0.2
+  );
+
+  // Set the backgroundColor based on the calculated opacityArray
+  myChart.data.datasets.forEach((dataset, index) => {
+    dataset.backgroundColor = opacityArray.map((opacity, i) => {
+      const color =
+        index === 0 ? "rgba(50, 49, 80," : "rgba(206, 77, 99,";
+      return `${color}${opacity})`;
+    });
+  });
+
+  myChart.update();
+}
+
+
+function dynamicBankValue() {
+  let monthlyInterestRate1 = 1.025;
+  let numberOfMonths1 = parseInt(output2.innerHTML) * 12;
+  let finalAmount1 = calculateFinalAmountBank(
+    input1,
+    monthlyInterestRate1,
+    numberOfMonths1
+  );
+
+  result1.innerText = finalAmount1
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  text0.appendChild(result1);
+  bankdiv.appendChild(text0);
+
+  updateChart();
+}
+
+function dynamicInvestValue() {
+  let monthlyInterestRate2 = 1.5416666667;
+  let numberOfMonths2 = parseInt(output2.innerHTML) * 12;
+  let finalAmount2 = calculateFinalAmount(
+    input1,
+    monthlyInterestRate2,
+    numberOfMonths2
+  );
+
+  result2.innerText = finalAmount2
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  text2.appendChild(result2);
+  investmentdiv.appendChild(text2);
+
+  updateChart();
+}
+
+input1.addEventListener("keypress", (event) => {
+  if (event.keyCode == 13) {
+    dynamicBankValue();
+    dynamicInvestValue();
+  }
+});
+
+//SLIDER
+
+var slider = document.getElementById("slider");
+var output1 = document.getElementById("yearValue1");
+var output2 = document.getElementById("yearValue2");
+
+output1.innerHTML = slider.value;
+output2.innerHTML = slider.value;
+
+minusIcon.addEventListener("click", () => {
+  let sliderValue = parseInt(output2.innerHTML);
+  if (sliderValue > 1) {
+    output2.innerHTML = (sliderValue - 1).toString();
+    slider.value = sliderValue - 1;
+    dynamicInvestValue();
+    dynamicBankValue();
+    updateSliderBackground();
+  }
+});
+
+plusIcon.addEventListener("click", () => {
+  let sliderValue = parseInt(output2.innerHTML);
+  if (sliderValue < 30) {
+    output2.innerHTML = (sliderValue + 1).toString();
+    slider.value = sliderValue + 1;
+    dynamicInvestValue();
+    dynamicBankValue();
+    updateSliderBackground();
+  }
+});
+
+function updateSliderBackground() {
+  var value = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+  slider.style.background = `linear-gradient(90deg, rgb(206,77,99) ${value}%, rgb(229,229,229) ${value}%)`;
+}
+
+slider.oninput = function () {
+  output1.innerHTML = this.value;
+  output2.innerHTML = this.value;
+  dynamicInvestValue();
+  dynamicBankValue();
+  updateSliderBackground();
+};
+
+// Chart initialization
+const data = {
+  labels: Array.from({ length: 30 }, (_, i) => `Year ${i + 1}`),
+  datasets: [
+    {
+      label: 'bank',
+      data: Array.from({ length: 30 }, (_, i) => 0),
+      backgroundColor: '#323150',
+      borderColor: 'rgba(255, 26, 104, 1)',
+      borderWidth: 0,
+      stack: 'Stack 0',
+    },
+    {
+      label: 'investment',
+      data: Array.from({ length: 30 }, (_, i) => 0),
+      backgroundColor: '#ce4d63',
+      borderColor: 'rgba(0, 0, 0, 1)',
+      borderWidth: 0,
+      stack: 'Stack 0',
+    },
+  ],
+};
+
+const config = {
+  type: 'bar',
+  data: data,
+  options: {
+    plugins: {
+      tooltip: {
+        enabled: false,
+      },
+       legend: {
+        display: false, // Remove the legend (top labels and color squares)
+      },
+    },
+    scales: {
+      x: {
+        stacked: true,
+        grid: {
+          display: false,
+          drawBorder: false,
+
+        },
+        ticks: {
+          display: false, // Remove the x-axis labels
+        },
+        zeroLineBorderDash: [], 
+        display: false,
+      },
+      y: {
+        beginAtZero: true,
+        stacked: true,
+        grid: {
+          display: false,
+          drawBorder: false,
+        },
+        ticks: {
+          display: false, // Remove the x-axis labels
+        },
+        
+        zeroLineBorderDash: [], 
+        display: false,
+      },
+    },
+    elements: {
+      line: {
+        borderWidth: 0, // Remove any lines in the dataset
+      },
+    },
+    layout: {
+      padding: {
+        bottom: 0, // Remove padding at the bottom to hide year labels
+      },
+    },
+  },
+};
+
+const myChart = new Chart(document.getElementById('myChart'), config);
+
+// Call updateChartData() initially and update the chart
+updateChart();
+
+</script>
+    
+  </body>
+</html>
+
+

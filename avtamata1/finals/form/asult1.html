@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Санхүүгийн Тайлан</title>
+    <link rel="stylesheet" href="asult1.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1Jlz1Kkiqn4QXXPTu-TdQjAwfCGY1DKYK/view">Жишээ тайлан харах</a></li>
+                </ul>
+                <div>Санхүүгийн Тайлан v3.</div>
+                <ul class="iconn">
+                    <li><a href="#" class="icon"><img src="https://img.icons8.com/?size=100&id=77&format=png&color=FFFFFF"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar">
+            <div>
+                <h1>Санхүүгийн <br> эрх чөлөөнд <br> хүрэх зам...</h1>
+                <div class="zuun_tal_text">
+                    <p>
+                        Хувийн санхүүгийн тайлангийн зорилго нь <br> таны санхүүгийн эрх чөлөөнд 
+                        хүрэх замыг <br> чиглүүлэх, хөрөнгө оруулалтын багцыг <br> тодорхойлох 
+                        санхүүгийн ирээдүйг өөрчлөх <br> үндэс суурийг тавих юм.
+                    </p>
+                    <p>
+                        Санхүүгийн эрх чөлөөнд хүрэх үе шатаа олон <br> алхам болгон хувааж 
+                        төлөвлөснөөр бага <br> багаар амжилтанд хүрч зорилгодоо хүрэхэд <br> илүү дөхөм байдаг
+                    </p>
+                </div>
+                <div class="zuun_tal_tolbor">
+                    <div class="tolbor_medeelel">
+                        <p class="payment-info">Төлбөрийн мэдээлэл: ₮ 50,000</p>
+                        <p>Хаан Банк 5131400786 (Акумулус Эдүкэйшн)</p>
+                    </div>
+                    <div>
+                        <p class="payment-info">Гүйлгээний утга: </p>
+                        <p>Бүртгүүлсэн имэйл хаяг</p>
+                        <p>. . . . . . . . . . . . . . . . . . . . . . .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>1.Хувийн мэдээлэл</h2>
+            <form id="surveyForm">
+                <div class="expense-box">
+                    <!-- асуулт 1:1 -->
+                    <label for="email">Мейл хаяг: </label>
+                    <input type="email" id="email" placeholder="Жишээ нь: anujin@gmail.com" name="email" required>
+            
+                    <!-- асуулт 1:2 -->
+                    <label for="name">Таны нэр:</label>
+                    <input type="text" id="name" placeholder="Жишээ нь: Анужин" name="name" required>
+            
+                    <!-- асуулт 1:3 -->
+                    <label for="utas_dugar">Утасны дугаар:</label>
+                    <input type="text" id="utas_dugar" placeholder="Жишээ нь: 9999-xxxx" name="phoneNumber" required>
+                </div>
+            </form>
+            <footer>
+                <div class="button-container">
+                    <button class="cta">
+                        <span><a href="asult2.html"  id="continue-btn" onclick="saveAllAnswers()">Үргэлжлүүлэх</a></span>
+                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="asult1.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Санхүүгийн Тайлан</title>
+    <link rel="stylesheet" href="asult4.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1Jlz1Kkiqn4QXXPTu-TdQjAwfCGY1DKYK/view">Жишээ тайлан харах</a></li>
+                </ul>
+                <div>Санхүүгийн Тайлан v3.</div>
+                <ul class="iconn">
+                    <li><a href="#" class="icon"><img src="https://img.icons8.com/?size=100&id=77&format=png&color=FFFFFF"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar">
+            <div>
+                <h1>Санхүүгийн <br> эрх чөлөөнд <br> хүрэх зам...</h1>
+                <div class="zuun_tal_text">
+                    <p>
+                        Хувийн санхүүгийн тайлангийн зорилго нь <br> таны санхүүгийн эрх чөлөөнд 
+                        хүрэх замыг <br> чиглүүлэх, хөрөнгө оруулалтын багцыг <br> тодорхойлох 
+                        санхүүгийн ирээдүйг өөрчлөх <br> үндэс суурийг тавих юм.
+                    </p>
+                    <p>
+                        Санхүүгийн эрх чөлөөнд хүрэх үе шатаа олон <br> алхам болгон хувааж 
+                        төлөвлөснөөр бага <br> багаар амжилтанд хүрч зорилгодоо хүрэхэд <br> илүү дөхөм байдаг
+                    </p>
+                </div>
+                <div class="zuun_tal_tolbor">
+                    <div class="tolbor_medeelel">
+                        <p class="payment-info">Төлбөрийн мэдээлэл: ₮ 50,000</p>
+                        <p>Хаан Банк 5131400786 (Акумулус Эдүкэйшн)</p>
+                    </div>
+                    <div>
+                        <p class="payment-info">Гүйлгээний утга: </p>
+                        <p>Бүртгүүлсэн имэйл хаяг</p>
+                        <p>. . . . . . . . . . . . . . . . . . . . . . .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>4.Санхүүгийн эрх чөлөө</h2>
+            <p>
+                Санхүүгийн эрх чөлөө гэдэг нь та мөнгөний 
+                биш, мөнгө таны боол болох үе. Та мөнгөний 
+                төлөө биш мөнгө таны төлөө ажиллах юм. Энэ 
+                үед та өөрийн дуртай, өөрт утга учиртай 
+                зүйлийг мөнгөний талаар бодохгүйгээр хийх 
+                боломжтой болно.
+            </p>
+            <h4 class="ulaan">
+                *** Дараах асуултад өөрийгөө эрх чөлөөнд 
+                хүрээд яг юу авахыг хүсэж байгаагаа бичээрэй ***
+            </h4>
+            
+           
+            <form id="surveyForm">
+                <div class="expense-box">
+                    <!-- asult 4:1 -->
+                    <label for="mashin_Toyota_Land_Cruiser">1. Автомашин (Ж: Toyota Land Cruiser)</label>
+                    <input type="text" id="mashin_Toyota_Land_Cruiser" placeholder="₮150,000,000" name="answer4.1" required>
+
+                    <!-- asult 4:2 -->
+                    <label for="oron_suuts_haus">2. Орон сууц (Ж: Хаус)</label>
+                    <input type="text" id="oron_suuts_haus" placeholder="₮500,000,000" name="answer4.2" required>
+
+                    <!-- asult 4:3 -->
+                    <label for="aylal_uls_oron_jild">3. Аялал (Ж: Өвөл бүр дулаан оронруу аялах жилийн)</label>
+                    <input type="text" id="aylal_uls_oron_jild" placeholder="₮15,000,000" name="answer4.3" required>
+
+                    <!-- asult 4:4 -->
+                    <label for="hobbi_zarlaga_ih">4. Хобби (Ж: Зарлага ихтэй хобби)</label>
+                    <input type="text" id="hobbi_zarlaga_ih" placeholder="₮5,000,000" name="answer4.4" required>
+
+                    <!-- asult 4:5 -->
+                    <label for="busad_jil_bur">5. Бусад</label>
+                    <input type="text" id="busad_jil_bur" placeholder="₮5,000,000" name="answer4.5" required>
+                </div>
+            </form>
+            <footer>
+                <div class="button-container">
+                    <button class="cta">
+                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                            <path d="M5,5 L11,5"></path>
+                            <polyline points="5 1 1 5 5 9"></polyline>
+                        </svg>
+                        <span><a href="asult3.html">Буцах</a></span>
+                    </button>
+                    
+                    <button class="cta"   id="continue-btn">
+                        <span><a href="asult5.html" onclick="saveAllAnswers()">Үргэлжлүүлэх</a></span>
+                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </footer>   
+        </div>
+    </div>
+    <script src="asult4.js"></script>
+</body>
+</html>

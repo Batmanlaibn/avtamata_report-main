@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Тооцооны Форм</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input { width: 60px; margin: 2px; }
+    .section { margin-bottom: 30px; border: 1px solid #ddd; padding: 10px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+
+<h1>Input оруулаад тооцооны үр дүнг үзэх</h1>
+
+<div class="section">
+  <h2>Input утгууд</h2>
+  <p>Нийтлэг утгууд:</p>
+  D5: <input id="D5" type="number" value="100"> 
+  D29: <input id="D29" type="number" value="2"> 
+  C11: <input id="C11" type="number" value="999"> 
+  C26: <input id="C26" type="number" value="111"> 
+  C34: <input id="C34" type="number" value="88"> 
+  C42: <input id="C42" type="number" value="777"><br><br>
+
+  <p>1-р ангийн өгөгдөл:</p>
+
+  C17-C22: <input id="C17" type="number" value="5"> <input id="C18" type="number" value="10"> 
+  <input id="C19" type="number" value="15"> <input id="C20" type="number" value="20"> 
+  <input id="C21" type="number" value="25"> <input id="C22" type="number" value="30"><br><br>
+
+  <p>2-р ангийн өгөгдөл:</p>
+  C44-C50: <input id="C44" type="number" value="1"> <input id="C45" type="number" value="2"> 
+  <input id="C46" type="number" value="3"> <input id="C47" type="number" value="4"> 
+  <input id="C48" type="number" value="5"> <input id="C49" type="number" value="6"> <input id="C50" type="number" value="7"><br><br>
+
+  <p>3-р ангийн өгөгдөл:</p>
+  D73-D79: <input id="D73" type="number" value="1"> <input id="D74" type="number" value="2"> 
+  <input id="D75" type="number" value="3"> <input id="D76" type="number" value="4"> 
+  <input id="D77" type="number" value="5"> <input id="D78" type="number" value="6"> 
+  <input id="D79" type="number" value="7"><br>
+  C73-C79: <input id="C73" type="number" value="1"> <input id="C74" type="number" value="2"> 
+  <input id="C75" type="number" value="3"> <input id="C76" type="number" value="4"> 
+  <input id="C77" type="number" value="5"> <input id="C78" type="number" value="6"> 
+  <input id="C79" type="number" value="7"><br><br>
+
+  <p>4-р ангийн өгөгдөл:</p>
+  D103-D108: <input id="D103" type="number" value="5"> <input id="D104" type="number" value="5"> 
+  <input id="D105" type="number" value="5"> <input id="D106" type="number" value="5"> 
+  <input id="D107" type="number" value="5"> <input id="D108" type="number" value="5"><br>
+  C103-C108: <input id="C103" type="number" value="6"> <input id="C104" type="number" value="6"> 
+  <input id="C105" type="number" value="6"> <input id="C106" type="number" value="6"> 
+  <input id="C107" type="number" value="6"> <input id="C108" type="number" value="6"><br><br>
+
+  <button onclick="calculate()">Тооцоолох</button>
+</div>
+
+<div class="section">
+  <h2>Үр дүн</h2>
+  <pre id="output"></pre>
+</div>
+
+<script>
+function val(id) {
+  return Number(document.getElementById(id).value);
+}
+
+function calculate() {
+  const D5 = val("D5"), D29 = val("D29"), C11 = val("C11"), C26 = val("C26"), C34 = val("C34"), C42 = val("C42");
+
+  // 1-р анги
+  const D24 = val("C17") *12 + val("C18") *12 + val("C19") *12 + val("C20") *12 + val("C21") *12 + val("C22");
+  const D30 = D24;
+  const C33 = 1 / D29;
+  const C35 = D30 * C33;
+  const D7 = D5;
+  const C24 = val("C17") + val("C18") + val("C19") + val("C20") + val("C21") + val("C22");
+  const C30 = C24;
+  const ХБХ1 = val("C18");
+  const СБХЭД1 = C11;
+
+  // 2-р анги
+  const C52 = val("C44") + val("C45") + val("C46") + val("C47") + val("C48") + val("C49") + val("C50");
+  const D52 = C52 * 12;
+  const D59 = D52;
+  const C62 = 1 / D5;
+  const C64 = D59 * C62;
+  const D58 = D5;
+  const G9 = C11;
+
+  // 3-р анги
+  const D81 = val("D73") + val("D74") + val("D75") + val("D76") + val("D77") + val("D78") + val("D79");
+  const D88 = D81;
+  const D87 = D5;
+  const C91 = 1 / D87;
+  const C93 = D88 * C91;
+  const G46 = D58;
+  const C81 = val("C73") + val("C74") + val("C75") + val("C76") + val("C77") + val("C78") + val("C79");
+  const G49 = G9;
+
+  // 4-р анги
+  const D110 = val("D103") + val("D104") + val("D105") + val("D106") + val("D107") + val("D108");
+  const D116 = D110;
+  const D115 = D5;
+  const C119 = 1 / D115;
+  const C121 = D116 * C119;
+  const G73 = G46;
+  const C110 = val("C103") + val("C104") + val("C105") + val("C106") + val("C107") + val("C108");
+  const G76 = G49;
+
+  // Гаргах
+  document.getElementById("output").innerText = `
+--- 1-р анги ---
+ШМД = ${C35}
+ӨХ(Ж) = ${D7}
+СӨ = ${C30}
+ХБХ(Ж) = ${ХБХ1}
+СБХЭД = ${СБХЭД1}
+
+--- 2-р анги ---
+ШМД = ${C64}
+ӨХ(Ж) = ${D58}
+СӨ = ${C52}
+ХБХ(Ж) = ${C26}
+СБХЭД = ${G9}
+
+--- 3-р анги ---
+ШМД = ${C93}
+ӨХ(Ж) = ${G46}
+СӨ = ${C81}
+ХБХ(Ж) = ${C34}
+СБХЭД = ${G49}
+
+--- 4-р анги ---
+ШМД = ${C121}
+ӨХ(Ж) = ${G73}
+СӨ = ${C110}
+ХБХ(Ж) = ${C42}
+СБХЭД = ${G76}
+`;
+}
+</script>
+</body>
+</html>

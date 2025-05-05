@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Санхүүгийн Тайлан</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="asult2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1Jlz1Kkiqn4QXXPTu-TdQjAwfCGY1DKYK/view">Жишээ тайлан харах</a></li>
+                </ul>
+                <div>Санхүүгийн Тайлан v3.</div>
+                <ul class="iconn">
+                    <li><a href="#" class="icon"><img src="https://img.icons8.com/?size=100&id=77&format=png&color=FFFFFF"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar">
+            <div>
+                <h1>Санхүүгийн <br> эрх чөлөөнд <br> хүрэх зам...</h1>
+                <div class="zuun_tal_text">
+                    <p>
+                        Хувийн санхүүгийн тайлангийн зорилго нь <br> таны санхүүгийн эрх чөлөөнд 
+                        хүрэх замыг <br> чиглүүлэх, хөрөнгө оруулалтын багцыг <br> тодорхойлох 
+                        санхүүгийн ирээдүйг өөрчлөх <br> үндэс суурийг тавих юм.
+                    </p>
+                    <p>
+                        Санхүүгийн эрх чөлөөнд хүрэх үе шатаа олон <br> алхам болгон хувааж 
+                        төлөвлөснөөр бага <br> багаар амжилтанд хүрч зорилгодоо хүрэхэд <br> илүү дөхөм байдаг
+                    </p>
+                </div>
+                <div class="zuun_tal_tolbor">
+                    <div class="tolbor_medeelel">
+                        <p class="payment-info">Төлбөрийн мэдээлэл: ₮ 50,000</p>
+                        <p>Хаан Банк 5131400786 (Акумулус Эдүкэйшн)</p>
+                    </div>
+                    <div>
+                        <p class="payment-info">Гүйлгээний утга: </p>
+                        <p>Бүртгүүлсэн имэйл хаяг</p>
+                        <p>. . . . . . . . . . . . . . . . . . . . . . .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>2.Санхүүгийн аюулгүй байдал</h2>
+            <p>
+                Таны санхүүгийн аюулгүй байдлыг хангах зардлыг тооцоолоход ашиглах тул 
+                сайтар тооцоолж зөв бөглөх тусам таны хувийн санхүүгийн тайлан илүү бодитой гарах боломжтой
+            </p>
+            <h4 class="ulaan">*Зардал байхгүй бол 0-г оруулна уу.</h4>
+             
+            <form id="surveyForm">
+                <div class="expense-box">
+                    <div class="form-row">
+                        <!-- 2:1 -->
+                        <div class="form-group">
+                            <label for="saiin_hool_hunsnii_zardal">1 сарын хоол хүнсний зардал</label>
+                            <input type="text" id="saiin_hool_hunsnii_zardal" placeholder="₮500,000" name="answer2.1" required oninput="formatNumber(this)">
+                        </div>
+                        <!-- 2:2 -->
+                        <div class="form-group">
+                            <label for="jiliin_surguul_bolon_surgaltiin_tolbor">Хүүхдийн сургалтын төлбөр</label>
+                            <input type="text" id="jiliin_surguul_bolon_surgaltiin_tolbor" placeholder="₮0" name="answer2.2" required oninput="formatNumber(this)">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <!-- 2:3 -->
+                        <div class="form-group">
+                            <label for="oron_suutsnii_tures">1 сарын орон сууцны түрээсийн зардал</label>
+                            <input type="text" id="oron_suutsnii_tures" placeholder="₮700,000" name="answer2.3" required oninput="formatNumber(this)">
+                        </div>
+                        <!-- 2:4 -->
+                        <div class="form-group">
+                            <label for="tog_us_tolbor">1 сарын тог, ус, цахилгаан, СӨХ-н зардал</label>
+                            <input type="text" id="tog_us_tolbor" placeholder="₮100,000" name="answer2.4" required oninput="formatNumber(this)">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <!-- 2:5 -->
+                        <div class="form-group">
+                            <label for="una_tewriin_zardal">1 сарын унаа, тээврийн зардал</label>
+                            <input type="text" id="una_tewriin_zardal" placeholder="₮200,000" name="answer2.5" required oninput="formatNumber(this)">
+                        </div>
+                        <!-- 2:6 -->
+                        <div class="form-group">
+                            <label for="eruulmend">1 сарын эрүүл мэндэд хэрэглэгддэг зардал</label>
+                            <input type="text" id="eruulmend" placeholder="₮200,000" name="answer2.6" required oninput="formatNumber(this)">
+                        </div>
+                    </div>
+                    <!-- 2:7 -->
+                    <div class="form-group">
+                        <label for="utas_daatgal_gishuunchlel">1 сарын бусад зардал</label>
+                        <input type="text" id="utas_daatgal_gishuunchlel" placeholder="₮150,000" name="answer2.7" required oninput="formatNumber(this)">
+                    </div>
+                </div>
+            </form>
+            <footer>   
+                <div class="button-container">
+                    <button class="cta">
+                    <!-- sumiig zuuntiish bairluulhiin tuld <svg> elimentiig <span>-iin omon bairluulsan -->
+                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                            <path d="M5,5 L11,5"></path>
+                            <!-- sumiig zuuntiish bairluulhiin tuld kordinatiig oorchilson -->
+                            <polyline points="5 1 1 5 5 9"></polyline>
+                        </svg>
+                        <span><a href="asult1.html">Буцах</a></span>
+                    </button>
+                        
+                    <button class="cta"   id="continue-btn">
+                        <span><a href="asult3.html" onclick="saveAllAnswers()">Үргэлжлүүлэх</a></span>
+                        <svg width="15px" height="10px" viewBox="0 0 13 10">
+                            <path d="M1,5 L11,5"></path>
+                            <polyline points="8 1 12 5 8 9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="asult2.js"></script>
+</body>
+</html>

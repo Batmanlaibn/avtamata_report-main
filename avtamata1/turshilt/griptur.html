@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Stages Poster</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #26225D;
+            font-family: Arial, sans-serif;
+        }
+        .canvas {
+            width: 1080px;
+            height: 1920px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .title {
+            position: absolute;
+            top: 130px;
+            left: 100px;
+            font-size: 38px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        .top-right-label {
+            position: absolute;
+            top: 80px;
+            right: 100px;
+            font-size: 12px;
+            color: #00FFD1;
+            background-color: transparent;
+            width: 160px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .vertical-line {
+            position: absolute;
+            left: 530px;
+            top: 230px;
+            height: 1400px;
+            width: 3px;
+            background-color: #00FFD1;
+        }
+        .stage {
+            position: absolute;
+            display: flex;
+            align-items: center;
+        }
+        .stage-name {
+            font-size: 20px;
+            color: #00FFD1;
+        }
+        .stage-amount {
+            font-size: 48px;
+            color: #FFFFFF;
+        }
+        .horizontal-line {
+            position: absolute;
+            height: 3px;
+            background-color: #00FFD1;
+        }
+        .circle-right {
+            width: 40px;
+            height: 40px;
+            background-color: #00FFD1;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .stage-1 { top: 220px; left: 100px; }
+        .stage-2 { top: 440px; left: 650px; }
+        .stage-3 { top: 660px; left: 100px; }
+        .stage-4 { top: 880px; left: 650px; }
+        .stage-1 .horizontal-line { top: 140px; left: 280px; width: 150px; }
+        .stage-2 .horizontal-line { top: 200px; right: 263px; width: 150px; }
+        .stage-3 .horizontal-line { top: 260px; left: 280px; width: 150px; }
+        .stage-4 .horizontal-line { top: 320px; right: 263px; width: 150px; }
+        .stage-1 .circle-right { top: 220px; left: 515px; }
+        .stage-2 .circle-right { top: 440px; left: 515px; }
+        .stage-3 .circle-right { top: 660px; left: 515px; }
+        .stage-4 .circle-right { top: 880px; left: 515px; }
+        .vertical-line .circle-right { top: 0px; left: -18px; }
+        .gol_zuraas_dood .circle-right { bottom: 250px; left: 513px; }
+        .amount-label {
+            font-size: 22px;
+            color: #FFFFFF;
+            margin-bottom: 5px;
+        }
+        .quote {
+            position: absolute;
+            bottom: 180px;
+            right: 100px;
+            font-size: 16px;
+            font-style: italic;
+            color: #FFFFFF;
+            text-align: right;
+        }
+        .footer-left {
+            position: absolute;
+            bottom: 60px;
+            left: 100px;
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+        .footer-right {
+            position: absolute;
+            bottom: 60px;
+            right: 100px;
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <div class="title">Таны санхүүгийн шатлалууд</div>
+        <div class="top-right-label">ТАНЫ ХУВИЙН САНХҮҮГИЙН ТАЙЛАН</div>
+        <div class="vertical-line">
+            <div class="circle-right"></div>
+        </div>
+
+        <div class="stage stage-1">
+            <div>
+                <div class="stage-name">Санхүүгийн Аюулгүй Байдал</div>
+                <div class="amount-label">Жилийн дүн: 0.00</div>
+                <div class="stage-amount">₮182,578,104</div>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="circle-right"></div>
+        </div>
+
+        <div class="stage stage-2">
+            <div>
+                <div class="stage-name">Санхүүгийн Тогтвортой Байдал</div>
+                <div class="amount-label">Жилийн дүн: 0.58</div>
+                <div class="stage-amount">₮248,128,214</div>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="circle-right"></div>
+        </div>
+
+        <div class="stage stage-3">
+            <div>
+                <div class="stage-name">Санхүүгийн Эрх чөлөө</div>
+                <div class="amount-label">Жилийн дүн: 1.17</div>
+                <div class="stage-amount">₮313,678,323</div>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="circle-right"></div>
+        </div>
+
+        <div class="stage stage-4">
+            <div>
+                <div class="stage-name">Санхүүгийн супер эрх чөлөө</div>
+                <div class="amount-label">Жилийн дүн: 1.83</div>
+                <div class="stage-amount">₮403,884,896</div>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="circle-right"></div>
+        </div>
+
+        <div class="quote">
+            Амжилттай, өндөртэй хувь хүн амжилттай дадал<br>зуршилтай байдаг тэр бол Стив Жобс
+        </div>
+
+        <div class="footer-left">08</div>
+        <div class="footer-right">САНХҮҮГИЙН ДҮРСЛЭЛ</div>
+        <div class="gol_zuraas_dood">
+            <div class="circle-right"></div>
+        </div>
+    </div>
+</body>
+</html>
