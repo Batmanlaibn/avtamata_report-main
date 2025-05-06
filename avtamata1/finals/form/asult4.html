@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Санхүүгийн Тайлан</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="asult4.css">
 </head>
 <body>
@@ -47,7 +48,7 @@
             </div>
         </div>
         <div class="main-content">
-            <h2>4.Санхүүгийн эрх чөлөө</h2>
+            <h2 style="font-family: Montserrat;">4.Санхүүгийн эрх чөлөө</h2>
             <p>
                 Санхүүгийн эрх чөлөө гэдэг нь та мөнгөний 
                 биш, мөнгө таны боол болох үе. Та мөнгөний 
@@ -64,25 +65,37 @@
            
             <form id="surveyForm">
                 <div class="expense-box">
-                    <!-- asult 4:1 -->
-                    <label for="mashin_Toyota_Land_Cruiser">1. Автомашин (Ж: Toyota Land Cruiser)</label>
-                    <input type="text" id="mashin_Toyota_Land_Cruiser" placeholder="₮150,000,000" name="answer4.1" required>
-
-                    <!-- asult 4:2 -->
-                    <label for="oron_suuts_haus">2. Орон сууц (Ж: Хаус)</label>
-                    <input type="text" id="oron_suuts_haus" placeholder="₮500,000,000" name="answer4.2" required>
-
-                    <!-- asult 4:3 -->
-                    <label for="aylal_uls_oron_jild">3. Аялал (Ж: Өвөл бүр дулаан оронруу аялах жилийн)</label>
-                    <input type="text" id="aylal_uls_oron_jild" placeholder="₮15,000,000" name="answer4.3" required>
-
-                    <!-- asult 4:4 -->
-                    <label for="hobbi_zarlaga_ih">4. Хобби (Ж: Зарлага ихтэй хобби)</label>
-                    <input type="text" id="hobbi_zarlaga_ih" placeholder="₮5,000,000" name="answer4.4" required>
-
-                    <!-- asult 4:5 -->
-                    <label for="busad_jil_bur">5. Бусад</label>
-                    <input type="text" id="busad_jil_bur" placeholder="₮5,000,000" name="answer4.5" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <!-- asult 4:1 -->
+                            <label for="mashin_Toyota_Land_Cruiser">Автомашин (Ж: Toyota Land Cruiser)</label>
+                            <input type="text" id="mashin_Toyota_Land_Cruiser" placeholder="₮150,000,000" name="answer4.1" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- asult 4:2 -->
+                            <label for="oron_suuts_haus">Орон сууц (Ж: Хаус)</label>
+                            <input type="text" id="oron_suuts_haus" placeholder="₮500,000,000" name="answer4.2" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <!-- asult 4:3 -->
+                            <label for="aylal_uls_oron_jild">Аялал (Ж: Өвөл бүр дулаан оронруу аялах жилийн)</label>
+                            <input type="text" id="aylal_uls_oron_jild" placeholder="₮15,000,000" name="answer4.3" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- asult 4:4 -->
+                            <label for="hobbi_zarlaga_ih">Хобби (Ж: Зарлага ихтэй хобби)</label>
+                            <input type="text" id="hobbi_zarlaga_ih" placeholder="₮5,000,000" name="answer4.4" required>
+                        </div>
+                    </div>
+                    <div class="form-row" style="margin-top: -10px;">
+                        <div class="form-group">
+                            <!-- asult 4:5 -->
+                            <label for="busad_jil_bur">Бусад</label>
+                            <input type="text" id="busad_jil_bur" placeholder="₮5,000,000" name="answer4.5" required>
+                        </div>
+                    </div>
                 </div>
             </form>
             <footer>

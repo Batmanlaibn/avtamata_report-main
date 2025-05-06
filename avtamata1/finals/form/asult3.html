@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Санхүүгийн Тайлан</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="asult3.css">
 </head>
 <body>
@@ -47,7 +48,7 @@
             </div>
         </div>
         <div class="main-content">
-            <h2>3.Санхүүгийн хараат бус байдал</h2>
+            <h2 style="font-family: Montserrat;">3.Санхүүгийн хараат бус байдал</h2>
             <p>
                 Өнөөдрийн амьдралын хэв маягаа энэ хэвээр нь 
                 хадгалж үлдэн, дахин ажиллах 
@@ -61,17 +62,26 @@
            
             <form id="surveyForm">
                 <div class="expense-box">
-                    <label for="jil_huwtsas_goyl_edlel">1 жилд хувцас, гоёл, эдлэл авахад зарцуулдаг дүн</label>
-                    <input type="text" id="jil_huwtsas_goyl_edlel" placeholder="₮1'000,000" name="answer3.1" required oninput="formatNumber(this)">
-        
-                    <label for="entertainment_zugaa_rsengel">1 сард энтертайнмент, зугаа цэнгэлд зарцуулдаг дүн</label>
-                    <input type="text" id="entertainment_zugaa_rsengel" placeholder="₮100,000" name="answer3.2" required oninput="formatNumber(this)">
-        
-                    <label for="sar_tansaglald">1 сард бага зэрэг тансаглалд зарцуулдаг дүн</label>
-                    <input type="text" id="sar_tansaglald" placeholder="₮100,000" name="answer3.3" required oninput="formatNumber(this)">
-        
-                    <label for="jild_amralt_zugaalga">1 жилийн амралт, зугаалгын зардал</label>
-                    <input type="text" id="jild_amralt_zugaalga" placeholder="₮1,000,000" name="answer3.4" required oninput="formatNumber(this)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="jil_huwtsas_goyl_edlel">1 жилд хувцас, гоёл, эдлэл авахад зарцуулдаг дүн</label>
+                            <input type="text" id="jil_huwtsas_goyl_edlel" placeholder="₮1'000,000" name="answer3.1" required oninput="formatNumber(this)">
+                        </div>
+                        <div class="form-group">
+                            <label for="entertainment_zugaa_rsengel">1 сард энтертайнмент, зугаа цэнгэлд зарцуулдаг дүн</label>
+                            <input type="text" id="entertainment_zugaa_rsengel" placeholder="₮100,000" name="answer3.2" required oninput="formatNumber(this)">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sar_tansaglald">1 сард бага зэрэг тансаглалд зарцуулдаг дүн</label>
+                            <input type="text" id="sar_tansaglald" placeholder="₮100,000" name="answer3.3" required oninput="formatNumber(this)">
+                        </div>
+                        <div class="form-group">
+                            <label for="jild_amralt_zugaalga">1 жилийн амралт, зугаалгын зардал</label>
+                            <input type="text" id="jild_amralt_zugaalga" placeholder="₮1,000,000" name="answer3.4" required oninput="formatNumber(this)">
+                        </div>
+                    </div>
                 </div>
             </form>
             <footer>

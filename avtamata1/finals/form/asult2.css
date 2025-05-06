@@ -3,9 +3,10 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #F4F4F4;
     display: flex;
     justify-content: center;
@@ -65,8 +66,8 @@ nav li a {
 }
   /* zuun taliin */
 .sidebar {
-    font-family: "Montserrat", sans-serif;
-    width: 600px;
+    font-family: 'Montserrat', sans-serif;
+    width: 615px;
     background: #424242;
     color: white;
     padding: 30px;
@@ -100,38 +101,40 @@ nav li a {
     margin-left: 69px;
 }
 .zuun_tal_tolbor{
-    margin-top: 130px;
+    margin-top: 90px;
     margin-left: 69px;
 }
   /*baruuntal */
 .ulaan{
     color: red;
+    margin-top: -15px;
 }
 .main-content {
     flex: 1;
-    padding: 40px;
+    padding: 70px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .main-content h2 {
+    margin-top: -30px;
     font-size: 50px;
-    font-weight: bold;
     color: #333;
     font-weight: 900;
 }
 .main-content p {
+    margin-top: -55px;
     font-size: 16px;
     color: #666;
+    font-weight: 400;
     margin-bottom: 10px;
 }
 .expense-box {
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
-
     flex-direction: column;
 }
 .form-row {
@@ -156,7 +159,7 @@ nav li a {
     height: 63px;
     width: 445px;
     padding: 10px;
-    font-size: 25px;
+    font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 20px;
     box-sizing: border-box;
@@ -218,7 +221,7 @@ nav li a {
 }
 .cta span {
     position: relative;
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.05em;

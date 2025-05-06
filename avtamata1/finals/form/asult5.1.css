@@ -5,7 +5,7 @@ html, body {
   height: 100%;
 }
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #F4F4F4;
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@ nav li a {
 }
 /* zuun taliin */
 .sidebar {
-  font-family: cursive;
+  font-family: 'Montserrat';
   width: 615px;
   background: #424242;
   color: white;
@@ -227,7 +227,7 @@ nav li a {
 }
 .cta span {
   position: relative;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Montserrat';
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;
