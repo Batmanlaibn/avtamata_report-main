@@ -5,7 +5,7 @@ html, body {
   height: 100%;
 }
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #F4F4F4;
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@ nav li a {
 }
 /* zuun taliin */
 .sidebar {
-  font-family: cursive;
+  font-family: 'Montserrat';
   width: 615px;
   background: #424242;
   color: white;
@@ -105,10 +105,12 @@ nav li a {
 }
 /*baruuntal */
 .main-content {
-  padding: 40px;
   flex: 1;
-  max-height: 850px;
+  padding: 40px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main-content h2 {
@@ -138,39 +140,50 @@ nav li a {
 }
 
 .expense-box input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  box-sizing: border-box;
+    top: 255px;
+    height: 63px;
+    width: 445px;
+    padding: 10px;
+    font-size: 25px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
 }
 .date-input label{
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 .date-fields{
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.date-fields input{
-  width: 60px;
-  padding: 5px;
-  text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.date-fields input {
+    width: 80px; /* Өмнө нь 60px байсан, одоо 80px болгож уртасгав */
+    padding: 5px; /* Доторх текст сайн харагдахаар бага зэрэг padding нэмэв */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px; /* Томруулж харагдахаар тохируулсан */
 }
 .date-fields span{
   font-size: 18px;
 }
 
 /* Button heseg */
+.main-content footer {
+  position: relative;
+  width: 100%;
+  background: white;
+  padding: 15px;
+  text-align: right;
+}
 .button-container {
   display: flex;
   justify-content: flex-end;
   margin-top: 30px;
+  text-align: right;
 }
 .button-container button a {
   color: rgb(15, 14, 14);
@@ -188,18 +201,7 @@ nav li a {
   align-items: center;
   justify-content: center;
 }
-.cta:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  border-radius: 50px;
-  background: #b1dae7;
-  width: 45px;
-  height: 45px;
-  transition: all 0.3s ease;
-}
+
 .cta svg {
   position: relative;
   top: 0;
@@ -214,7 +216,7 @@ nav li a {
 }
 .cta span {
   position: relative;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;

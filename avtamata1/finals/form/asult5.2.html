@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="main-content">
-            <h2>5.Санхүүгийн мэдээлэл</h2>
+            <h2 style="font-family: Montserrat">5.Санхүүгийн мэдээлэл</h2>
             <p>
                 Нийт хөрөнгө, өр төлбөрийн тодорхойлолт
                 /Дараах асуултуудыг үнэн зөв бөглөвөл таны 
@@ -61,127 +61,83 @@
            
             <form id="surveyForm">
                 <div class="expense-box">
-                    <label for="bairnii_zeel_uldegdel">Байрны зээл (Үлдэгдэл)</label>
-                    <input type="text" id="numberInput" placeholder="₮100,000" name="answer5.1" required>
+                    <!-- asult 5:8 -->
+                    <label for="bairnii_zeel">Байрны зээл (Үлдэгдэл)</label>
+                    <input type="text" id="bairnii_zeel" placeholder="₮100,000" name="bairnii_zeel" required>
 
+                    <!-- asult 5:9 on sar odor -->
                     <div class="date-input">
                         <label for="bairnii_zeeliin_duusah_hugatsaa">
-                            Байрны зээлийн дуусах хугацаа (Ж: 05/31/2021)
+                            Байрны зээлийн дуусах хугацаа (Ж: 12/31/2025)
                         </label>
                         <div class="date-fields">
-                            <input type="number" id="month1" placeholder="12" maxlength="2" name="answer5.2">
+                            <input type="number" id="month1" placeholder="12" maxlength="2">
                             <span></span>
-                            <input type="number" id="day1" placeholder="30" maxlength="2" name="answer5.3">
+                            <input type="number" id="day1" placeholder="30" maxlength="2">
                             <span></span>
-                            <input type="number" id="year1" placeholder="2025" maxlength="4" name="answer5.4">
-                            
+                            <input type="number" id="year1" placeholder="2025" maxlength="4">
+                            <!-- <input type="" id="" name="" required> -->
                         </div>
                     </div>
 
-                    <label for="tsalingiin_zeeliin_sariin_tololt">Байрны зээлийн сарын төлөлт (Ж: ₮500,000)</label>
-                    <input type="text" id="numberInput" placeholder="₮500,000" name="answer5.5" required>
 
-                    <label for="heregleenii_zeel_uldegdel">Машины зээл (Үлдэгдэл)</label>
-                    <input type="text" id="numberInput" placeholder="₮100,000" name="answer5.6" required>  
-                        <label for="tsalingiin_zeeliin_duusah_hugatsaa">
-                            Машины зээлийн дуусах хугацаа (Ж: 05/31/2021)
-                        </label>
-                        <div class="date-fields">
-                            <input type="number" id="month2" placeholder="12" maxlength="2" name="answer5.7">
-                            <span></span>
-                            <input type="number" id="day2" placeholder="30" maxlength="2" name="answer5.8">
-                            <span></span>
-                            <input type="number" id="year2" placeholder="2025" maxlength="4" name="answer5.9">
-                            
-                        </div>
-                    </div>
+                    <!-- asult 5:10 -->
+                    <label for="bairnii_zeeliin_sariin_tololt">Байрны зээлийн сарын төлөлт (Ж: ₮1,000,000)</label>
+                    <input type="text" id="bairnii_zeeliin_sariin_tololt" placeholder="₮1,000,000" name="bairnii_zeeliin_sariin_tololt" required>
 
-                    <label for="tsalingiin_zeeliin_sariin_tololt">Машины зээлийн сарын төлөлт (Ж: ₮500,000)</label>
-                    <input type="text" id="numberInput" placeholder="₮500,000" name="answer5.10" required>
+                    <!-- asult 5:11 -->
+                    <label for="mashinii_zeel_uldegdel">Машины зээл (Үлдэгдэл)</label>
+                    <input type="text" id="mashinii_zeel_uldegdel" placeholder="₮100,000" name="mashinii_zeel_uldegdel" required>
 
-                    <label for="heregleenii_zeel_uldegdel">Цалингийн зээл (Үлдэгдэл)</label>
-                    <input type="text" id="numberInput" placeholder="₮100,000" name="answer5.11" required>
 
+                    <!-- asult 5:12 on sar odor -->
                     <div class="date-input">
-                        <label for="tsalingiin_zeeliin_duusah_hugatsaa">
-                            Цалингийн зээлийн дуусах хугацаа (Ж: 05/31/2021)
+                        <label for="mashinii_zeeliin_duusah_hugatsaa">
+                            Машины зээлийн дуусах хугацаа (Ж: 12/31/2023)
                         </label>
                         <div class="date-fields">
-                            <input type="number" id="month3" placeholder="12" maxlength="2" name="answer5.12">
+                            <input type="number" id="month2" placeholder="12" maxlength="2">
                             <span></span>
-                            <input type="number" id="day3" placeholder="30" maxlength="2" name="answer5.13">
+                            <input type="number" id="day2" placeholder="30" maxlength="2">
                             <span></span>
-                            <input type="number" id="year3" placeholder="2025" maxlength="4" name="answer5.14">
-                            
+                            <input type="number" id="year2" placeholder="2025" maxlength="4">
+                            <!-- <input type="mashinii_zeeliin_duusah_hugatsaa" id="mashinii_zeeliin_duusah_hugatsaa" name="mashinii_zeeliin_duusah_hugatsaa" required> -->
                         </div>
                     </div>
 
-                    <label for="tsalingiin_zeeliin_sariin_tololt">Цалингийн зээлийн сарын төлөлт (Ж: ₮500,000)</label>
-                    <input type="text" id="numberInput" placeholder="₮500,000" name="answer5.15" required>
+                    
+                    <!-- asult 5:13 -->
+                    <label for="mashinii_zeeliin_sariin_tololt">Машины зээлийн сарын төлөлт (Ж: ₮800,000)</label>
+                    <input type="text" id="mashinii_zeeliin_sariin_tololt" placeholder="₮800,000" name="mashinii_zeeliin_sariin_tololt" required>
 
-                    <label for="heregleenii_zeel_uldegdel">Хэрэглээний зээл (Үлдэгдэл)</label>
-                    <input type="text" id="numberInput" placeholder="₮100,000" name="answer5.16" required>
-
-                    <div class="date-input">
-                        <label for="tsalingiin_zeeliin_duusah_hugatsaa">
-                            Хэрэглээний зээлийн дуусах хугацаа (Ж: 05/31/2021)
-                        </label>
-                        <div class="date-fields">
-                            <input type="number" id="month4" placeholder="12" maxlength="2" name="answer5.17">
-                            <span></span>
-                            <input type="number" id="day4" placeholder="30" maxlength="2" name="answer5.18">
-                            <span></span>
-                            <input type="number" id="year4" placeholder="2025" maxlength="4" name="answer5.19">
-                            
-                        </div>
-                    </div>
-
-                    <label for="tsalingiin_zeeliin_sariin_tololt">Хэрэглээний зээлийн сарын төлөлт (Ж: ₮500,000)</label>
-                    <input type="text" id="numberInput" placeholder="₮500,000" name="answer5.20" required>
-
-                    <label for="heregleenii_zeel_uldegdel">Бусад зээл (Үлдэгдэл)</label>
-                    <input type="text" id="numberInput" placeholder="₮100,000" name="answer5.21" required>
-
-                    <div class="date-input">
-                        <label for="tsalingiin_zeeliin_duusah_hugatsaa">
-                            Бусад зээлийн дуусах хугацаа (Ж: 05/31/2021)
-                        </label>
-                        <div class="date-fields">
-                            <input type="number" id="month5" placeholder="12" maxlength="2" name="answer5.22">
-                            <span></span>
-                            <input type="number" id="day5" placeholder="30" maxlength="2" name="answer5.23">
-                            <span></span>
-                            <input type="number" id="year5" placeholder="2025" maxlength="4" name="answer5.24">
-                            
-                        </div>
-                    </div>
-
-                    <label for="tsalingiin_zeeliin_sariin_tololt">Бусад зээлийн сарын төлөлт (Ж: ₮500,000)</label>
-                    <input type="text" id="numberInput" placeholder="₮500,000" name="answer5.25" required>
-
+                    <!-- asult 5:14 -->
+                    <label for="tsalingiin_zeel_uldegdel">Цалингийн зээл (Үлдэгдэл)</label>
+                    <input type="text" id="tsalingiin_zeel_uldegdel" placeholder="₮100,000" name="tsalingiin_zeel_uldegdel" required>
                 </div>
+                <footer>
+
+                    <div class="button-container">
+                        <button class="cta">
+                            <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                <path d="M5,5 L11,5"></path>
+                                <polyline points="5 1 1 5 5 9"></polyline>
+                            </svg>
+                            <span><a href="asult5.1.html">Буцах</a></span>
+                        </button>
+                        
+                        <button class="cta"   id="continue-btn" style="padding-left: 200px; margin-top: 20px;">
+                            <span><a href="asult5.3.html" onclick="saveAllAnswers()">Үргэлжлүүлэх</a></span>
+                            <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </footer>
             </form>
-
-                <div class="button-container">
-                    <button class="cta">
-                        <svg width="15px" height="10px" viewBox="0 0 13 10">
-                            <path d="M5,5 L11,5"></path>
-                            <polyline points="5 1 1 5 5 9"></polyline>
-                        </svg>
-                        <span><a href="asult5.1.html">Буцах</a></span>
-                    </button>
-                    
-                    <button class="cta" id="continue-btn" onclick="saveAllAnswers()">
-                        <span>Үргэлжлүүлэх</span>
-                        <svg width="15px" height="10px" viewBox="0 0 13 10">
-                            <path d="M1,5 L11,5"></path>
-                            <polyline points="8 1 12 5 8 9"></polyline>
-                        </svg>
-                    </button>
-                    
-                </div>
+           
         </div>
     </div>
-    <script src="asult5.2.js"></script>
+    <script src="asult5.js"></script>
 </body>
 </html>

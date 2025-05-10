@@ -166,10 +166,18 @@ input[type="radio"] {
 }
     
   /* Button heseg */
+  .main-content footer {
+    position: relative;
+    width: 100%;
+    background: white;
+    padding: 15px;
+    text-align: right;
+}
 .button-container {
     display: flex;
     justify-content: flex-end;
     margin-top: 30px;
+    text-align: right;
 }
 .button-container button a {
     color: rgb(15, 14, 14);
@@ -187,21 +195,7 @@ input[type="radio"] {
     align-items: center;
     justify-content: center;
 }
-  
-.cta:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    border-radius: 50px;
-    background: #b1dae7;
-    width: 45px;
-    height: 45px;
-    transition: all 0.3s ease;
-}
 
-  /* SVG in zuun tald bairluulj, textees hoish zai awhiin tuld margin-right ogson */
 .cta svg {
     position: relative;
     top: 0;
@@ -214,7 +208,6 @@ input[type="radio"] {
     transform: translateX(5px);
     transition: all 0.3s ease;
 }
-  
 .cta span {
     position: relative;
     font-family: 'Montserrat', sans-serif;
@@ -223,19 +216,16 @@ input[type="radio"] {
     letter-spacing: 0.05em;
     color: #234567;
 }
-  
 .cta:hover:before {
     width: 100%;
     background: #b1dae7;
 }
-  
 .cta:hover svg {
     transform: translateX(0);
 }
-  
 .cta:active {
     transform: scale(0.95);
-} 
+}
 /* utsaar oroh uyd*/
 @media only screen and (max-width: 440px){
     /* utasnii delegtsed tohiruulah */
