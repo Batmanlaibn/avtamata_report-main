@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Санхүүгийн Тайлан</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="asult4.css">
+    <link rel="stylesheet" href="asult8.css">
 </head>
 <body>
     <div class="container">
@@ -46,52 +46,27 @@
             </div>
         </div>
         <div class="main-content">
-            <h2 style="font-family: Montserrat;">4.Санхүүгийн эрх чөлөө</h2>
-            <p>
-                Санхүүгийн эрх чөлөө гэдэг нь та мөнгөний 
-                биш, мөнгө таны боол болох үе. Та мөнгөний 
-                төлөө биш мөнгө таны төлөө ажиллах юм. Энэ 
-                үед та өөрийн дуртай, өөрт утга учиртай 
-                зүйлийг мөнгөний талаар бодохгүйгээр хийх 
-                боломжтой болно.
-            </p>
-            <h4 class="ulaan">
-                *** Дараах асуултад өөрийгөө эрх чөлөөнд 
-                хүрээд яг юу авахыг хүсэж байгаагаа бичээрэй ***
-            </h4>
-            
-           
+            <h2 style="font-family: Montserrat;">8.Орлого</h2>
             <form id="surveyForm">
                 <div class="expense-box">
                     <div class="form-row">
                         <div class="form-group">
-                            <!-- asult 4:1 -->
-                            <label for="mashin_Toyota_Land_Cruiser">Автомашин (Ж: Toyota Land Cruiser)</label>
-                            <input type="text" id="mashin_Toyota_Land_Cruiser" placeholder="₮150,000,000" name="answer4.1" required>
+                            <label for="sariin_tsewer_tsalin">1 сарын цэвэр цалин (Татварын дараах цалин)</label>
+                            <input type="text" placeholder="₮5,000,000" name="answer6.1" required oninput="formatNumber(this)">
                         </div>
                         <div class="form-group">
-                            <!-- asult 4:2 -->
-                            <label for="oron_suuts_haus">Орон сууц (Ж: Хаус)</label>
-                            <input type="text" id="oron_suuts_haus" placeholder="₮500,000,000" name="answer4.2" required>
+                            <label for="ul_hodlohiin_tureesiin_orolgo">Үл хөдлөхийн түрээсийн орлого (1 сар)</label>
+                            <input type="text" placeholder="₮1,000,000" name="answer6.2" required oninput="formatNumber(this)"> 
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <!-- asult 4:3 -->
-                            <label for="aylal_uls_oron_jild">Аялал (Ж: Өвөл бүр дулаан оронруу аялах жилийн)</label>
-                            <input type="text" id="aylal_uls_oron_jild" placeholder="₮15,000,000" name="answer4.3" required>
+                            <label for="biznesiin_tsewer_ashig">Бизнесийн цэвэр ашиг (1 сар) <br>Бизнесийн сарын цэвэр ашигаа оруулна. <br>Бизнесийн орлоготой бол</label>
+                            <input type="text" placeholder="₮1,000,000" name="answer6.3" required oninput="formatNumber(this)">
                         </div>
                         <div class="form-group">
-                            <!-- asult 4:4 -->
-                            <label for="hobbi_zarlaga_ih">Хобби (Ж: Зарлага ихтэй хобби)</label>
-                            <input type="text" id="hobbi_zarlaga_ih" placeholder="₮5,000,000" name="answer4.4" required>
-                        </div>
-                    </div>
-                    <div class="form-row" style="margin-top: -10px;">
-                        <div class="form-group">
-                            <!-- asult 4:5 -->
-                            <label for="busad_jil_bur">Бусад</label>
-                            <input type="text" id="busad_jil_bur" placeholder="₮5,000,000" name="answer4.5" required>
+                            <label for="busad_orlogo">Бусад орлого (1 сар)<br>Та анкет бөглөхдөө нийт гэр бүлийн зардлаа оруулсан бол гэр бүлийн гишүүдийн орлогыг энд тусгаж өгнө үү.</label>
+                            <input type="text" placeholder="₮1,000,000" name="answer6.4" required oninput="formatNumber(this)">
                         </div>
                     </div>
                 </div>
@@ -103,20 +78,22 @@
                             <path d="M5,5 L11,5"></path>
                             <polyline points="5 1 1 5 5 9"></polyline>
                         </svg>
-                        <span><a href="asult3.html">Буцах</a></span>
+                        <span><a href="asult7.html">Буцах</a></span>
                     </button>
                     
-                    <button class="cta"   id="continue-btn">
-                        <span><a href="asult5.html" onclick="saveAllAnswers()">Үргэлжлүүлэх</a></span>
+                    <button class="cta"   id="continue-btn" onclick="saveAllAnswers()">
+                        <span> <a href="asult9.html">Үргэлжлүүлэх</a></span>
                         <svg width="15px" height="10px" viewBox="0 0 13 10">
                             <path d="M1,5 L11,5"></path>
                             <polyline points="8 1 12 5 8 9"></polyline>
                         </svg>
                     </button>
                 </div>
-            </footer>   
+            </footer>
         </div>
     </div>
-    <script src="asult4.js"></script>
+
+<script src="asult8.js"></script>
+
 </body>
 </html>

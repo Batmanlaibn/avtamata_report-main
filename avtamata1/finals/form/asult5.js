@@ -55,7 +55,7 @@ function saveAllAnswers() {
     localStorage.setItem("totalInvestmentAsset", totalInvestmentAsset);
 
     // Navigate to the next page
-    window.location.href = "asult5.2.html";
+    window.location.href = "asult6.html";
 }
 
 // Add event listener to the continue button

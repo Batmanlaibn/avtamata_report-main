@@ -25,10 +25,10 @@ body {
     left: 0;
     width: 99%; 
     z-index: 1000;
-    height: 90px;
+    height: 70px;
 }
 nav {
-    padding: 10px 0;
+    padding: 1px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -61,21 +61,20 @@ nav li a {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 100%;
-    min-height: 100vh; /* Дэлгэцийн өндөртэй тэнцүү */
-    padding-top: 80px; /* Header-ийн доорх зай нэмэх */
+    min-height: 100vh;
+    padding-top: 80px;
 }
   /* zuun taliin */
 .sidebar {
-    font-family: 'Montserrat', sans-serif;
-    width: 615px;
+    font-family: "Montserrat";
+    width: 560px;
     background: #424242;
     color: white;
-    padding: 30px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 1117px;
-    overflow-y: auto; /* Доторх агуулгыг скроллоно */
 }
 .sidebar h1 {
     font-size: 48px;
@@ -91,14 +90,16 @@ nav li a {
     font-weight: bold;
 }
 .sidebar, .main-content {
-    margin-top: 60px; /* Header доошлуулах */
+    margin-top: 60px; 
 }
 .zuun_tal_text{
     height: 286px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
     margin-bottom: 5px;
-    margin-left: 69px;
+    padding-left: 69px;
+    text-align: justify;
+    padding-right: 70px;
 }
 .zuun_tal_tolbor{
     margin-top: 90px;
@@ -146,7 +147,7 @@ nav li a {
 .form-group {
     display: flex;
     flex-direction: column;
-    width: 48%; /* Хоёр талд жигд хуваарилна */
+    width: 48%;
 }
 .expense-box label {
     width: 100%;

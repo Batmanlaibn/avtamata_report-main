@@ -22,16 +22,14 @@
         </div>
         <div class="sidebar">
             <div>
-                <h1>Санхүүгийн <br> эрх чөлөөнд <br> хүрэх зам...</h1>
+                <h1>Санхүүгийн эрх чөлөөнд хүрэх зам...</h1>
                 <div class="zuun_tal_text">
                     <p>
-                        Хувийн санхүүгийн тайлангийн зорилго нь <br> таны санхүүгийн эрх чөлөөнд 
-                        хүрэх замыг <br> чиглүүлэх, хөрөнгө оруулалтын багцыг <br> тодорхойлох 
-                        санхүүгийн ирээдүйг өөрчлөх <br> үндэс суурийг тавих юм.
+                        Хувийн санхүүгийн тайлангийн зорилго нь таны санхүүгийн эрх чөлөөнд хүрэх замыг чиглүүлэх, хөрөнгө оруулалтын багцыг тодорхойлох санхүүгийн ирээдүйг өөрчлөх үндэс суурийг тавих юм.
                     </p>
                     <p>
-                        Санхүүгийн эрх чөлөөнд хүрэх үе шатаа олон <br> алхам болгон хувааж 
-                        төлөвлөснөөр бага <br> багаар амжилтанд хүрч зорилгодоо хүрэхэд <br> илүү дөхөм байдаг
+                        Санхүүгийн эрх чөлөөнд хүрэх үе шатаа олон алхам болгон хувааж 
+                        төлөвлөснөөр бага  багаар амжилтанд хүрч зорилгодоо хүрэхэд илүү дөхөм байдаг
                     </p>
                 </div>
                 <div class="zuun_tal_tolbor">
@@ -48,55 +46,102 @@
             </div>
         </div>
         <div class="main-content">
-            <h2>6.Орлого</h2>
+            <h2 style="font-family: Montserrat">6.Санхүүгийн мэдээлэл</h2>
+            <p>
+                Нийт хөрөнгө, өр төлбөрийн тодорхойлолт
+                /Дараах асуултуудыг үнэн зөв бөглөвөл таны 
+                санхүүгийн тайлан илүү оновчтой гарах
+                боломжтой. Тиймээс анхааралтай бөглөхийг 
+                зөвлөе/
+            </p>
+          
+            
+           
             <form id="surveyForm">
                 <div class="expense-box">
-                <form id="question1">
-                    <label>1 сарын цэвэр цалин (Татварын дараах цалин)</label> <br>
-                    <input type="text" placeholder="₮5,000,000" name="answer6.1" required> <br>
-                </form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <!-- asult 5:8 -->
+                            <label for="bairnii_zeel_uldegdel">Байрны зээл (Үлдэгдэл)</label>
+                            <input type="text" id="numberInput" placeholder="₮100,000" name="answer5.1" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- asult 5:10 -->
+                            <label for="tsalingiin_zeeliin_sariin_tololt">Байрны зээлийн сарын төлөлт (Ж: ₮500,000)</label>
+                            <input type="text" id="numberInput" placeholder="₮500,000" name="answer5.5" required>
+                        </div>
+                    </div>
 
-                <form id="question2">
-                    <label>Үл хөдлөхийн түрээсийн орлого (1 сар)</label> <br>
-                    <input type="text" placeholder="₮1,000,000" name="answer6.2" required> <br>
-                </form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <!-- asult 5:11 -->
+                            <label for="heregleenii_zeel_uldegdel">Машины зээл (Үлдэгдэл)</label>
+                            <input type="text" id="numberInput" placeholder="₮100,000" name="answer5.6" required>  
+                        </div>
+                        <div class="form-group">
+                            <!-- asult 5:13 -->
+                            <label for="tsalingiin_zeeliin_sariin_tololt">Машины зээлийн сарын төлөлт (Ж: ₮500,000)</label>
+                            <input type="text" id="numberInput" placeholder="₮500,000" name="answer5.10" required>
+                        </div>
+                    </div>
 
-                <form id="question3">
-                    <label>Бизнесийн цэвэр ашиг (1 сар) <br>Бизнесийн сарын цэвэр ашигаа оруулна. <br>Бизнесийн орлоготой бол</label> <br>
-                    <input type="text" placeholder="₮1,000,000" name="answer6.3" required> <br>
-                </form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <!-- asult 5:14 -->
+                            <label for="heregleenii_zeel_uldegdel">Цалингийн зээл (Үлдэгдэл)</label>
+                            <input type="text" id="numberInput" placeholder="₮100,000" name="answer5.11" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tsalingiin_zeeliin_sariin_tololt">Цалингийн зээлийн сарын төлөлт (Ж: ₮500,000)</label>
+                            <input type="text" id="numberInput" placeholder="₮500,000" name="answer5.15" required>
+                        </div>
+                    </div>
 
-                <form id="question4">
-                    <label>Бусад орлого (1 сар)<br>Та анкет бөглөхдөө нийт гэр бүлийн зардлаа оруулсан бол гэр бүлийн гишүүдийн орлогыг энд тусгаж өгнө үү.</label> <br>
-                    <input type="text" placeholder="₮1,000,000" name="answer6.4" required> <br>
-                </form>
-            </div>
-        </form>
-
-            <footer>
-
-                <div class="button-container">
-                    <button class="cta">
-                        <svg width="15px" height="10px" viewBox="0 0 13 10">
-                            <path d="M5,5 L11,5"></path>
-                            <polyline points="5 1 1 5 5 9"></polyline>
-                        </svg>
-                        <span><a href="asult5.2.html">Буцах</a></span>
-                    </button>
-                    
-                    <button class="cta"   id="continue-btn" onclick="saveAllAnswers()" style="padding-left: 200px; margin-top: 20px;">
-                        <span>Үргэлжлүүлэх</span>
-                        <svg width="15px" height="10px" viewBox="0 0 13 10">
-                            <path d="M1,5 L11,5"></path>
-                            <polyline points="8 1 12 5 8 9"></polyline>
-                        </svg>
-                    </button>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="heregleenii_zeel_uldegdel">Хэрэглээний зээл (Үлдэгдэл)</label>
+                            <input type="text" id="numberInput" placeholder="₮100,000" name="answer5.16" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tsalingiin_zeeliin_sariin_tololt">Хэрэглээний зээлийн сарын төлөлт (Ж: ₮500,000)</label>
+                            <input type="text" id="numberInput" placeholder="₮500,000" name="answer5.20" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="heregleenii_zeel_uldegdel">Бусад зээл (Үлдэгдэл)</label>
+                            <input type="text" id="numberInput" placeholder="₮100,000" name="answer5.21" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tsalingiin_zeeliin_sariin_tololt">Бусад зээлийн сарын төлөлт (Ж: ₮500,000)</label>
+                            <input type="text" id="numberInput" placeholder="₮500,000" name="answer5.25" required>
+                        </div>
+                    </div>
                 </div>
-            </footer>
+                <footer>
+
+                    <div class="button-container">
+                        <button class="cta">
+                            <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                <path d="M5,5 L11,5"></path>
+                                <polyline points="5 1 1 5 5 9"></polyline>
+                            </svg>
+                            <span><a href="asult5.html">Буцах</a></span>
+                        </button>
+                        
+                        <button class="cta"   id="continue-btn">
+                            <span><a href="asult7.html" onclick="saveAllAnswers()">Үргэлжлүүлэх</a></span>
+                            <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </footer>
+            </form>
+           
         </div>
     </div>
-
-<script src="asult6.js"></script>
-
+    <script src="asult6.js"></script>
 </body>
 </html>
