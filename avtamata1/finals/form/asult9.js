@@ -20,3 +20,7 @@ function saveAllAnswers() {
     // Redirect after saving
     window.location.href = "../medeelel_haruulah_heseg/index.html";
 }
+
+
+
+

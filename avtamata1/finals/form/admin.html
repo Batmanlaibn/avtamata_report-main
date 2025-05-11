@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ самбар</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <header>
+        <h1>Админ самбар</h1>
+        <input type="text" id="search" placeholder="Хэрэглэгчийн нэрээр хайх">
+        <button id="search-button">Хайх</button>
+        <button id="logout-button">Гарах</button>
+    </header>
+    
+    <div class="action-buttons">
+        <button id="add-user-button">Шинэ хэрэглэгч нэмэх</button>
+        <button id="delete-selected-button">Сонгосон хэрэглэгчийг устгах</button>
+    </div>
+    
+    <div style="overflow-x: auto;">
+        <table border="1" style="border-collapse: collapse; white-space: nowrap;" id="user-table">
+            <tr>
+                <th><input type="checkbox" id="select-all"></th>
+                <th>1. Хэрэглэгчийн нэр</th>
+                <th>2. Хэрэглэгчийн имэйл</th>
+                <th>3. Хэрэглэгчийн утас</th>
+                <th>1. 1 сарын хоол хүнсний зардал</th>
+                <th>2. Сургалтын төлбөр (жилийн)</th>
+                <th>3. 1 сарын түрээс</th>
+                <th>4. 1 сарын тог, ус, СӨХ</th>
+                <th>5. 1 сарын тээвэр</th>
+                <th>6. 1 сарын эрүүл мэнд</th>
+                <th>7. 1 сарын бусад зардал</th>
+                <th>8. 1 жилд хувцас</th>
+                <th>9. 1 сарын энтертайнмент</th>
+                <th>10. 1 сарын тансаглал</th>
+                <th>11. 1 жилийн амралт</th>
+                <th>12. Хөрөнгө: Автомашин</th>
+                <th>13. Хөрөнгө: Орон сууц</th>
+                <th>14. Аялал</th>
+                <th>15. Хобби</th>
+                <th>16. Бусад</th>
+                <th>17. Үл хөдлөх хөрөнгө 1</th>
+                <th>18. Үл хөдлөх хөрөнгө 2</th>
+                <th>19. Машин</th>
+                <th>20. Хадгаламж</th>
+                <th>21. Бусад хөрөнгө</th>
+                <th>22. Байрны зээл үлдэгдэл</th>
+                <th>23. Байрны сарын зээл</th>
+                <th>24. Машины зээл үлдэгдэл</th>
+                <th>25. Цалингийн зээл</th>
+                <th>26. Хэрэглээний зээл</th>
+                <th>27. Бусад зээл</th>
+                <th>28. 1 сарын цэвэр цалин</th>
+                <th>29. 1 сарын түрээсийн орлого</th>
+                <th>30. Бусад орлого</th>
+                <th>31. Бизнесийн ашиг</th>
+                <th>32. Хөрөнгө оруулалтын зорилго</th>
+                <th>33. Хэдэн жил багцаа барих вэ</th>
+                <th>34. Нас</th>
+                <th>35. Зах зээлийн мэдлэг</th>
+                <th>36. Хүсэж буй өгөөж</th>
+                <th>37. Хүлээж болох алдагдал</th>
+                <th>38. Эрсдэл гэж сонсоход юу бодогддог</th>
+                <th>39. Хувьцаа унавал шийдвэр</th>
+                <th>40. Эрсдэл хүлээх чадвар</th>
+                <th>Үйлдэл</th>
+            </tr>
+        </table>
+    </div>
+
+    
+    <script src="./admin.js"></script>
+</body>
+</html>
