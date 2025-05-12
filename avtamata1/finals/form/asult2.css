@@ -27,6 +27,9 @@ body {
     z-index: 1000;
     height: 70px;
 }
+.short-text {
+    display: none;
+}
 nav {
     padding: 1px 0;
     display: flex;
@@ -228,7 +231,83 @@ nav li a {
 }
   
 /* utsaar oroh uyd*/
-@media screen and (max-width: 299px) {
+@media screen and (max-width: 500px) {
+    body{
+        font-size: 20%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 20px; 
+    }
+    .full-text {
+        display: none;
+    }
+    .short-text {
+        display: inline;
+    }
+
+    .header {
+        height: 60px;
+        padding: 10px;
+    }
+    
+    nav li {
+        margin: 5px;
+    }
+    
+    nav li a {
+        font-size: 12px;
+        padding-right: 10px;
+    }
+    
+    nav div {
+        font-size: 12px;
+    }
+    
+    .container {
+        padding-top: 60px;
+    }
+    
+    .main-content h2 {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .form-row {
+        flex-direction: column; 
+        margin-top: -20px;
+    }
+    .form-group {
+        width: 100%; 
+        font-size: 10px;
+    }
+    .expense-box {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: -250px;
+    }
+    
+    .expense-box input {
+        height: 50px;
+        font-size: 13px;
+        margin-top: 10px;
+        width: 240px;
+    }
+    
+    .button-container {
+        margin-top: -80px;
+        margin-right: 40px;
+    }
+    
+    .cta span {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 600px) {
     body{
         font-size: 20%;
     }
@@ -278,354 +357,7 @@ nav li a {
     .expense-box {
         padding-left: 10px;
         padding-right: 10px;
-        margin-top: -250px;
-    }
-    
-    .expense-box input {
-        height: 50px;
-        font-size: 13px;
-        margin-top: 10px;
-        width: 130%;
-    }
-    
-    .button-container {
-        margin-top: -80px;
-        margin-right: 40px;
-    }
-    
-    .cta span {
-        font-size: 13px;
-    }
-}
-@media screen and (min-width: 300px) {
-      body{
-        font-size: 20%;
-    }
-
-    .sidebar {
-        display: none; /* Зүүн талын хэсгийг нууна */
-    }
-
-    .main-content {
-        width: 100%; /* Гол агуулга дэлгэцийн бүрэн өргөнийг эзэлнэ */
-        padding: 20px; /* Хязгаарлагдмал зайд илүү тохиромжтой padding */
-    }
-
-    .header {
-        height: 60px;
-        padding: 10px;
-    }
-    
-    nav li {
-        margin: 5px;
-    }
-    
-    nav li a {
-        font-size: 12px;
-    }
-    
-    nav div {
-        font-size: 12px;
-    }
-    
-    .container {
-        padding-top: 60px;
-    }
-    
-    .main-content h2 {
-        margin-top: 20px;
-        font-size: 18px;
-    }
-    .form-row {
-        flex-direction: column; /* Жижиг дэлгэц дээр input-уудыг босоогоор байрлуулна */
-        margin-top: -20px;
-    }
-    .form-group {
-        width: 100%; /* Бүтэн өргөн эзэлнэ */
-        font-size: 10px;
-    }
-    .expense-box {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: -290px;
-    }
-    
-    .expense-box input {
-        height: 50px;
-        font-size: 13px;
-        margin-top: 10px;
-        width: 170%;
-    }
-    
-    .button-container {
-        margin-top: -80px;
-        margin-right: 40px;
-    }
-    
-    .cta span {
-        font-size: 13px;
-    }
-}
-@media screen and (min-width: 350px) {
-      body{
-        font-size: 20%;
-    }
-
-    .sidebar {
-        display: none; /* Зүүн талын хэсгийг нууна */
-    }
-
-    .main-content {
-        width: 100%; /* Гол агуулга дэлгэцийн бүрэн өргөнийг эзэлнэ */
-        padding: 20px; /* Хязгаарлагдмал зайд илүү тохиромжтой padding */
-    }
-
-    .header {
-        height: 60px;
-        padding: 10px;
-    }
-    
-    nav li {
-        margin: 5px;
-    }
-    
-    nav li a {
-        font-size: 12px;
-    }
-    
-    nav div {
-        font-size: 12px;
-    }
-    
-    .container {
-        padding-top: 60px;
-    }
-    
-    .main-content h2 {
-        margin-top: 20px;
-        font-size: 18px;
-    }
-    .form-row {
-        flex-direction: column; /* Жижиг дэлгэц дээр input-уудыг босоогоор байрлуулна */
-        margin-top: -20px;
-    }
-    .form-group {
-        width: 100%; /* Бүтэн өргөн эзэлнэ */
-        font-size: 10px;
-    }
-    .expense-box {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: -190px;
-    }
-    
-    .expense-box input {
-        height: 50px;
-        font-size: 13px;
-        margin-top: 10px;
-        width: 170%;
-    }
-    
-    .button-container {
-        margin-top: -80px;
-        margin-right: 40px;
-    }
-    
-    .cta span {
-        font-size: 13px;
-    }
-}
-@media screen and (min-width: 380px) {
-      body{
-        font-size: 20%;
-    }
-
-    .sidebar {
-        display: none; /* Зүүн талын хэсгийг нууна */
-    }
-
-    .main-content {
-        width: 100%; /* Гол агуулга дэлгэцийн бүрэн өргөнийг эзэлнэ */
-        padding: 20px; /* Хязгаарлагдмал зайд илүү тохиромжтой padding */
-    }
-
-    .header {
-        height: 60px;
-        padding: 10px;
-    }
-    
-    nav li {
-        margin: 5px;
-    }
-    
-    nav li a {
-        font-size: 12px;
-    }
-    
-    nav div {
-        font-size: 12px;
-    }
-    
-    .container {
-        padding-top: 60px;
-    }
-    
-    .main-content h2 {
-        margin-top: 20px;
-        font-size: 18px;
-    }
-    .form-row {
-        flex-direction: column; /* Жижиг дэлгэц дээр input-уудыг босоогоор байрлуулна */
-        margin-top: -20px;
-    }
-    .form-group {
-        width: 100%; /* Бүтэн өргөн эзэлнэ */
-        font-size: 10px;
-    }
-    .expense-box {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: -290px;
-    }
-    
-    .expense-box input {
-        height: 50px;
-        font-size: 13px;
-        margin-top: 10px;
-        width: 170%;
-    }
-    
-    .button-container {
-        margin-top: -80px;
-        margin-right: 40px;
-    }
-    
-    .cta span {
-        font-size: 13px;
-    }
-}
-@media screen and (min-width: 400px) {
-      body{
-        font-size: 20%;
-    }
-
-    .sidebar {
-        display: none; /* Зүүн талын хэсгийг нууна */
-    }
-
-    .main-content {
-        width: 100%; /* Гол агуулга дэлгэцийн бүрэн өргөнийг эзэлнэ */
-        padding: 20px; /* Хязгаарлагдмал зайд илүү тохиромжтой padding */
-    }
-
-    .header {
-        height: 60px;
-        padding: 10px;
-    }
-    
-    nav li {
-        margin: 5px;
-    }
-    
-    nav li a {
-        font-size: 12px;
-    }
-    
-    nav div {
-        font-size: 12px;
-    }
-    
-    .container {
-        padding-top: 60px;
-    }
-    
-    .main-content h2 {
-        margin-top: 20px;
-        font-size: 29px;
-    }
-    .form-row {
-        flex-direction: column; /* Жижиг дэлгэц дээр input-уудыг босоогоор байрлуулна */
-        margin-top: -20px;
-    }
-    .form-group {
-        width: 100%; /* Бүтэн өргөн эзэлнэ */
-        font-size: 10px;
-    }
-    .expense-box {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: 40px;
-        overflow-y: auto; /* Зөвхөн энэ хэсэгт scrollbar гарна */
-        overflow-x: hidden;
-    }
-    
-    .expense-box input {
-        height: 50px;
-        font-size: 15px;
-        margin-top: 10px;
-        width: 370px;
-    }
-    
-    .button-container {
-        margin-top: -80px;
-        margin-right: 40px;
-    }
-    
-    .cta span {
-        font-size: 13px;
-    }
-}
-@media screen and (min-width: 500px) {
-      body{
-        font-size: 20%;
-    }
-
-    .sidebar {
-        display: none; /* Зүүн талын хэсгийг нууна */
-    }
-
-    .main-content {
-        width: 100%; /* Гол агуулга дэлгэцийн бүрэн өргөнийг эзэлнэ */
-        padding: 20px; /* Хязгаарлагдмал зайд илүү тохиромжтой padding */
-    }
-
-    .header {
-        height: 60px;
-        padding: 10px;
-    }
-    
-    nav li {
-        margin: 5px;
-    }
-    
-    nav li a {
-        font-size: 12px;
-    }
-    
-    nav div {
-        font-size: 12px;
-    }
-    
-    .container {
-        padding-top: 60px;
-    }
-    
-    .main-content h2 {
-        margin-top: 20px;
-        font-size: 18px;
-    }
-    .form-row {
-        flex-direction: column; /* Жижиг дэлгэц дээр input-уудыг босоогоор байрлуулна */
-        margin-top: -20px;
-    }
-    .form-group {
-        width: 100%; /* Бүтэн өргөн эзэлнэ */
-        font-size: 10px;
-    }
-    .expense-box {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: -250px;
+        margin-top: -450px;
     }
     
     .expense-box input {
@@ -644,9 +376,10 @@ nav li a {
         font-size: 13px;
     }
 }
-@media screen and (min-width: 600px) {
-        body{
+@media screen and (max-width: 760px) {
+      body{
         font-size: 20%;
+        overflow: auto;
     }
 
     .sidebar {
@@ -669,6 +402,7 @@ nav li a {
     
     nav li a {
         font-size: 12px;
+        padding-right: 10px;
     }
     
     nav div {
@@ -680,77 +414,17 @@ nav li a {
     }
     
     .main-content h2 {
-        margin-top: 20px;
+        margin-top: -10px;
         font-size: 18px;
     }
-    .form-row {
-        flex-direction: column; /* Жижиг дэлгэц дээр input-уудыг босоогоор байрлуулна */
-        margin-top: -20px;
+    .main-content p {
+        margin-top: -15px;
+        font-size: 14px;
+        line-height: 1;
     }
-    .form-group {
-        width: 100%; /* Бүтэн өргөн эзэлнэ */
-        font-size: 10px;
-    }
-    .expense-box {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: -250px;
-    }
-    
-    .expense-box input {
-        height: 50px;
-        font-size: 13px;
-        margin-top: 10px;
-        width: 240px;
-    }
-    
-    .button-container {
-        margin-top: -80px;
-        margin-right: 40px;
-    }
-    
-    .cta span {
-        font-size: 13px;
-    }
-}
-@media screen and (min-width: 760px) {
-    body{
-        font-size: 100%;
-    }
-
-    .sidebar {
-        display: none; /* Зүүн талын хэсгийг нууна */
-    }
-
-    .main-content {
-        width: 100%; /* Гол агуулга дэлгэцийн бүрэн өргөнийг эзэлнэ */
-        padding: 20px; /* Хязгаарлагдмал зайд илүү тохиромжтой padding */
-    }
-
-    .header {
-        height: 60px;
-        padding: 10px;
-    }
-    
-    nav li {
-        margin: 5px;
-    }
-    
-    nav li a {
-        font-size: 12px;
-    }
-    
-    nav div {
-        font-size: 12px;
-    }
-    
-    .container {
-        padding-top: 60px;
-    }
-    
-    .main-content h2 {
-        margin-top: 20px;
-        font-size: 38px;
+    .ulaan{
+        margin-top: 2px;
+        font-size: 14px;
     }
     .form-row {
         flex-direction: column; /* Жижиг дэлгэц дээр input-уудыг босоогоор байрлуулна */
@@ -763,7 +437,7 @@ nav li a {
     .expense-box {
         padding-left: 10px;
         padding-right: 10px;
-        margin-top: -250px;
+        margin-top: 20px;
     }
     
     .expense-box input {
@@ -774,7 +448,7 @@ nav li a {
     }
     
     .button-container {
-        margin-top: -80px;
+        margin-top: -10px;
         margin-right: 40px;
     }
     
@@ -782,4 +456,5 @@ nav li a {
         font-size: 13px;
     }
 }
+
 
